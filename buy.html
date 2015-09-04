@@ -1,0 +1,1168 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/gb.css" rel="stylesheet" />
+    <link href="css/search.css" rel="stylesheet" />
+	<style type="text/css">
+		.mod_bar2_2btn{height: 50px;background: #E6E6E6; border-bottom: 1px solid #D7D7D7}
+		.mod_spanel .mod_spanel_hd{ background: #E6E6E6;border-bottom: 1px solid #D7D7D7}
+		.mod_spanel_hd .mod_spanel_form {border-color: #CDCDCD; background: #FFFFFF; color: #666666;}
+		.mod_spanel_form .mod_spanel_input{  color:#666666;}
+		.mod_spanel_form .mod_spanel_clear:after,
+		.mod_spanel_form .mod_spanel_submit:after{ background-image: url(http://static.paipaiimg.com/fd/qqpai/base/img/spr_searchpanel_qq.png?v=201503031839);}
+		.mod_bar2_2btn .mod_bar2_back:before{background-position: -13px -49px;}
+		.mod_bar2_2btn .mod_bar2_search:before{ background-position: -18px -30px;}
+		.mod_bar2_2btn .mod_bar2_input input{border-color: #CDCDCD; background: #FFFFFF; color: #666666;}
+		.mod_bar2_2btn .mod_bar2_search2,
+		.btn_filter_confirm,
+		.btn_filter_attr,
+		.btn_filter_select,
+		.btn_filter_clear,
+		.mod_spanel_hd .mod_spanel_back{border-color: #B0B0B0;color: #666666;background: none}
+		.filter_hd_wrap .cur{color: #666666;}
+		.mod_bar2_search2{ right:10px;}
+		.mod_bar2_2btn .mod_bar2_input{ right:70px;}
+		.filter_hd_wrap{background: #E6E6E6;}
+		.mod_bar2_search2:active{background:#ffffff;}
+	</style>
+</head>
+<body mycollectionplug="bind">
+    <div class="main_wrap" id="main-container" elem-point="main_wrap">
+        <div class="search_wrap mod_container" elem-point="search_wrap" id="search_wrap">
+            <div class="mod_bar2 mod_bar2_2btn" header="true"><a class="mod_bar2_back" ptag="12479.32.2" back="true" href="javascript:;">返回</a><div class="mod_bar2_input" id="J_searchEnter" ptag="12479.32.3">
+                <input readonly="true" type="text" ptag="20602.1.1" placeholder="搜索宝贝、店铺"><a href="javascript:;" class="mod_bar2_search">搜索</a></div>
+                <a class="mod_bar2_search2" href="javascript:void(0);" filter="true" ptag="12479.32.6" event-point="filter:move" report-point="filter:btn">筛选</a></div>
+            <div class="search_hd_wrap">
+
+
+
+                <script>
+                    var $HEADER_CONFIG = {
+                        rendercallback: function () { },
+                        left: 'back',
+                        type: 'A',
+                        hidemore: true,
+                        right: {
+                            type: 'filter'
+                        }
+                    };
+                </script>
+
+
+
+                <!-- 店铺内搜索输出 -->
+
+                <!-- 店铺内搜索输出 -->
+                <script type="text/javascript" charset="utf-8" src="http://static.paipaiimg.com/sinclude/mobile/common/header.min.js?date=120"></script>
+                <!--[if !IE]>|xGv00|f1821e91bdb2c9494b5ded12514ffe38<![endif]-->
+            </div>
+            <div id="smartbox_wrap" style="display: none"></div>
+            <div class="search_bd_wrap" id="search_bd_wrap" elem-point="search_bd_wrap">
+                <div class="result_wrap" elem-point="result_wrap">
+
+
+                    <div class="mask" event-point="filter:cancel"></div>
+
+                    <!-- 全站搜素输出 -->
+
+                    <!-- 全站搜索输出 -->
+
+                    <div id="ship_wrap" class="ship_wrap" elem-point="ship_wrap"></div>
+
+
+
+                    <div class="search_item_wrap no_title" id="search_item" elem-point="search_item_wrap">
+                        <div id="landing_page" class="landing_page" elem-point="landing_page">
+                            <div class="slider swiper-container swipe swiper-container-horizontal">
+                                <div class="pic_list swiper-wrapper swipe-wrap" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px);">
+                                    <div class="swiper-slide swiper-slide-active" style="width: 640px;"><a href="http://b.paipai.com/itemweb/item?scence=101&amp;ic=DE7E9E2A00000000040100003951F497">
+                                        <img src="http://img6.paipaiimg.com/07f44b36/item-5388788F-DE7E9E2A00000000040100003951F497.0.400x400.jpg"></a></div>
+                                    <div class="swiper-slide swiper-slide-next" style="width: 640px;"><a href="http://b.paipai.com/itemweb/item?scence=101&amp;ic=DE7E9E2A00000000040100003951F497">
+                                        <img src="http://img6.paipaiimg.com/ed67199b/item-53887890-DE7E9E2A00000000040100003951F497.1.400x400.jpg"></a></div>
+                                    <div class="swiper-slide" style="width: 640px;"><a href="http://b.paipai.com/itemweb/item?scence=101&amp;ic=DE7E9E2A00000000040100003951F497">
+                                        <img src="http://img6.paipaiimg.com/8cfd48e4/item-53887890-DE7E9E2A00000000040100003951F497.2.400x400.jpg"></a></div>
+                                    <div class="swiper-slide" style="width: 640px;"><a href="http://b.paipai.com/itemweb/item?scence=101&amp;ic=DE7E9E2A00000000040100003951F497">
+                                        <img src="http://img6.paipaiimg.com/47172644/item-53887890-DE7E9E2A00000000040100003951F497.3.400x400.jpg"></a></div>
+                                    <div class="swiper-slide" style="width: 640px;"><a href="http://b.paipai.com/itemweb/item?scence=101&amp;ic=DE7E9E2A00000000040100003951F497">
+                                        <img src="http://img6.paipaiimg.com/f446aa6f/item-53887891-DE7E9E2A00000000040100003951F497.4.400x400.jpg"></a></div>
+                                </div>
+                                <div class="bar_wrap pagination swiper-pagination-clickable"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+                            </div>
+                            <div class="buy_area">
+                                <div class="fn_wrap fn_wrap_paipai">
+                                    <h1 class="fn" id="itemName">特价包邮征途FC968CC云测速电子自动更新固定流动雷达预警仪一体</h1>
+                                    <a href="javascript:void(0);" class="sharebtn_wrap" nofx="true" event-point="in_fav">
+                                        <div class="txt">关注</div>
+                                    </a>
+                                </div>
+                                <div class="ld_comm_detail">
+                                    <div class="ld_comm_price ld_comm_detail_row retail_price">
+                                        价格：
+					<strong>¥
+						<em>299.00</em>
+                    </strong>
+                                    </div>
+                                    <div class="ld_comm_sale ld_comm_detail_row">
+                                        销量：46
+                                    </div>
+                                </div>
+                                <div class="ld_action">
+                                    <a class="icon_buy" href="http://b.paipai.com/itemweb/item?scence=101&amp;ic=DE7E9E2A00000000040100003951F497" event-point="in_cart">立即购买</a>
+                                </div>
+                            </div>
+                            <p class="ld_result_txt">
+                                相关搜索结果
+                            </p>
+
+                        </div>
+                        <!-- 商品搜索输出 -->
+
+                        <div class="comm_item" id="comm_item" elem-point="comm_item">
+                            <div id="part_item" elem-point="shop_comm_item"></div>
+                            <div id="all_item" elem-point="global_comm_item">
+                                <div class="page_item">
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=E2E45732000000000401000039544733" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,E2E45732000000000401000039544733,1,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img2.paipaiimg.com/a7e85691/item-5523B2FE-E2E45732000000000401000039544733.0.300x300.jpg" src="http://img2.paipaiimg.com/a7e85691/item-5523B2FE-E2E45732000000000401000039544733.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">兰博基尼车模电子狗 固定流动测速一体机 雷达预警 全程语音播报 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>168</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量234件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=343F3EAD0000000004010000352A1BC1" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,343F3EAD0000000004010000352A1BC1,2,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img4.paipaiimg.com/b43a2cbb/item-53A6A05A-343F3EAD0000000004010000352A1BC1.0.300x300.jpg" src="http://img4.paipaiimg.com/b43a2cbb/item-53A6A05A-343F3EAD0000000004010000352A1BC1.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">超薄款安全预警仪 固定流动测速一体机 韩国雷达非国产 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>299</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量576件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=E2E45732000000000401000039546297" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,E2E45732000000000401000039546297,3,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img2.paipaiimg.com/eb9d0f0c/item-548E5E85-E2E45732000000000401000039546297.0.300x300.jpg" src="http://img2.paipaiimg.com/eb9d0f0c/item-548E5E85-E2E45732000000000401000039546297.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">雷克萨斯A81+云智能语音播报电子狗 内置高德地图自动升级数据  </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>288.99</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量120件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=E2E457320000000004010000395398BE" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,E2E457320000000004010000395398BE,4,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img2.paipaiimg.com/707835ce/item-55A8C621-E2E457320000000004010000395398BE.0.300x300.jpg" src="http://img2.paipaiimg.com/707835ce/item-55A8C621-E2E457320000000004010000395398BE.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">途美D700行车记录仪 汽车载高清夜视1080P三合一电子测速狗一体机 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>449.82</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量6件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=8C65F6320000000004010000370D549E" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,8C65F6320000000004010000370D549E,5,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img4.paipaiimg.com/e8166ccd/item-556420E8-8C65F6320000000004010000370D549E.0.300x300.jpg" src="http://img4.paipaiimg.com/e8166ccd/item-556420E8-8C65F6320000000004010000370D549E.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">丁威特 智能自动升级云电子狗 雷达测速固定流动一体机 汽车新款安全预警仪 车载云电子狗  </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>299</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量32件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=343F3EAD000000000401000036E2FBFB" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,343F3EAD000000000401000036E2FBFB,6,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img4.paipaiimg.com/e92e6a7e/item-53467F7D-343F3EAD000000000401000036E2FBFB.0.300x300.jpg" src="http://img4.paipaiimg.com/e92e6a7e/item-53467F7D-343F3EAD000000000401000036E2FBFB.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">天视利GPS路虎固定流动测速预警 自动升级云预警仪 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>343</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量34件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=343F3EAD000000000401000035359DE7" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,343F3EAD000000000401000035359DE7,7,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img4.paipaiimg.com/80405bae/item-52AFDBCB-343F3EAD000000000401000035359DE7.0.300x300.jpg" src="http://img4.paipaiimg.com/80405bae/item-52AFDBCB-343F3EAD000000000401000035359DE7.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">布加迪D9预警仪 固定流动测速一体机 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>255</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量8件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=8C65F6320000000004010000346C44C0" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,8C65F6320000000004010000346C44C0,8,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img4.paipaiimg.com/cf5b824f/item-530707FB-8C65F6320000000004010000346C44C0.0.300x300.jpg" src="http://img4.paipaiimg.com/cf5b824f/item-530707FB-8C65F6320000000004010000346C44C0.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">车载电子狗安全预警仪测速狗固定流动一键升级测速雷达一体机  </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>468</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量1480件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=8C65F632000000000401000031C01FFF" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,8C65F632000000000401000031C01FFF,9,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img4.paipaiimg.com/2467a492/item-52390424-8C65F632000000000401000031C01FFF.0.300x300.jpg" src="http://img4.paipaiimg.com/2467a492/item-52390424-8C65F632000000000401000031C01FFF.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">丁威特 GPS轨迹行车记录仪三合一体机固定流动电子狗 测速雷达一体机 高灵敏侦测雷达预警仪 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>499</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                        <p class="comm_sale_num">销量1269件</p>
+                                    </a>
+                                    <a class="comm_unit" href="http://b.paipai.com/itemweb/item?ptag=20511.2.1&amp;scence=101&amp;ic=29892010000000000401000051AD1999" report-point="item:comm:global" report-data="2374352554237896714409265510997,30,9101,29892010000000000401000051AD1999,10,1,43571,2,">
+                                        <div class="comm_cover">
+                                            <p>
+                                                <img data-original="http://img1.paipaiimg.com/06f04aa2/item-5588FADC-29892010000000000401000051AD1999.0.300x300.jpg" src="http://img1.paipaiimg.com/06f04aa2/item-5588FADC-29892010000000000401000051AD1999.0.300x300.jpg" alt="">
+                                            </p>
+                                        </div>
+                                        <p class="comm_title">得科DA-199A电子狗最新款流动固定雷达测速仪一体机车载安全预警仪 </p>
+                                        <p class="comm_price">
+                                            <span class="retail_price">
+                                                <strong>¥
+							<em>636</em>
+                                                </strong>
+                                            </span>
+                                            <span class="market_price">
+                                                <strong>¥
+							<del>0.00</del>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 商品输出搜索 -->
+
+                        <div class="shop_item" id="shop_item" elem-point="shop_item"></div>
+                        <div class="filter_item" id="filter_item" elem-point="filter_item"></div>
+                        <div class="delete_item" id="delete_item" elem-point="delete_item"></div>
+                        <div class="supply_item" id="supply_item" elem-point="supply_item">
+                            <div class="supply_hd">
+                                <h2>
+                                    <i class="icon_supply"></i>
+                                    京东推荐
+                                </h2>
+                            </div>
+                            <div class="supply_bd" elem-point="supply_bd">
+                            </div>
+                        </div>
+
+                        <div class="loading_wrap" id="loading_wrap" elem-point="loading_wrap" style="display: none;">
+                            <i class="icon_loading"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 店铺内搜索 -->
+
+                <!-- 店铺内搜索 -->
+            </div>
+
+            <div class="search_ft_wrap">
+                <div id="footernav" style="display: none" class="mod_aside mod_aside2">
+                    <a id="morebutton" class="mod_aside_more" href="javascript:;"></a>
+                    <a id="backtotop" class="mod_aside_top" href="javascript:;"></a>
+                    <div id="navlist" style="display: none;" class="mod_aside_item">
+                        <a id="pagenavlink0" class="mod_aside_fav" href="http://www.paipai.com/m2/index.html?ptag=12475.19.1">拍拍首页</a>
+                        <a id="pagenavlink1" class="mod_aside_fav" href="http://www.paipai.com/m2/ttj/tuan_list.html?_vw=1&amp;ptag=12475.19.7" style="color: #E02428">拍便宜</a>
+                        <a id="pagenavlink3" href="http://app.paipai.com/h5/checkDownApp/h5CllApp.xhtml?union_type=f_paipaih52&amp;ptag=12475.19.11">拍拍App</a>
+                        <a id="pagenavlink2" style="display: none" class="mod_aside_uc" href="javascript:;">店铺首页</a>
+                        <a class="mod_aside_uc" href="http://m.paipai.com/cart/index.shtml?ptag=12475.19.9">我的购物车</a>
+                        <a id="pagenavlink5" class="mod_aside_history" href="http://paipai.com/m2/my/fav.shtml?_vw=1&amp;ptag=12475.19.4">我的微店</a>
+                        <a id="pagenavlink4" class="mod_aside_uc" href="http://paipai.com/m2/my/order_list.shtml?_vw=1&amp;ptag=12475.19.6">我的订单</a>
+                    </div>
+                </div>
+
+                <div class="mod_footer" id="common_footer">
+                    <div class="mod_footer_lk">
+                        <a name="footerfirst" href="http://www.paipai.com/m2/index.html?ptag=12475.31.1&amp;_vw=1">拍拍首页</a>
+                        <a name="footerprofile" href="http://m2.paipai.com/my/index.shtml?ptag=12475.31.3">我的拍拍</a>
+                        <a name="footerindex" style="color: #e02229" href="http://wd.paipai.com/static/wxd/h5.html?chid=47&amp;isrun=1&amp;isjump=1&amp;ptag=12475.31.2&amp;_vw=1">免费开店</a>
+                    </div>
+                    <div id="footer_logo" class="mod_footer_logo">
+                        <a href="http://m.paipai.com?ptag=12475.31.4&amp;_vw=1">
+                            <span class="mod_logo"></span>
+                        </a>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    window.FOOTER_SOURCECODE = (function () {
+                        (function () {
+                            var metas = document.getElementsByTagName('meta');
+                            var isPaipaiAPP = false;
+                            var UA = window.navigator.userAgent;
+                            //如果是拍拍APP或者拍拍小店不展示底部导航和挂件
+                            if (/Paipaiapp/i.test(UA) || UA.toLowerCase().match(/paipaiwxd/) || UA.toLowerCase().match(/iospaipaiapp/) || UA.toLowerCase().match(/androidpaipaiapp/)) {
+                                isPaipaiAPP = true;
+                            }
+
+                            var footerControl = function () {
+                                var footer = document.getElementById('common_footer');
+
+                                var showfooter = metas['showfooter'];
+                                if ((showfooter && showfooter.getAttribute("show") === "false") || isPaipaiAPP) { //整个底部是否显示
+                                    footer.style.display = "none";
+                                    return;
+                                }
+
+                                var footerlogo = metas['footerlogo'];
+                                if (footerlogo && footerlogo.getAttribute("show") === "false") {//底部logo是否显示
+                                    document.getElementById('footer_logo').style.display = "none";
+                                    return;
+                                }
+
+                                var aTags = footer.getElementsByTagName('a');
+                                for (var i = 0; i < aTags.length; i++) {//底部隐藏、修改链接控制
+                                    if (metas[aTags[i].name]) {
+                                        if (metas[aTags[i].name].getAttribute("show") === "false") {
+                                            aTags[i].parentNode.removeChild(aTags[i])
+                                            i = --i;
+                                        } else if (metas[aTags[i].name].getAttribute("change") === "true") {
+                                            if (metas[aTags[i].name].getAttribute("href")) {
+                                                aTags[i].name.href = metas[aTags[i].name].getAttribute("href");
+                                            }
+                                            if (metas[aTags[i].name].getAttribute("text")) {
+                                                while (aTags[i].firstChild) {
+                                                    aTags[i].removeChild(aTags[i].firstChild);
+                                                }
+                                                aTags[i].appendChild(document.createTextNode(metas[aTags[i].name].getAttribute("text")));
+                                            }
+                                        }
+                                    }
+                                }
+
+                                var addLink = function (link) {//底部添加链接控制
+                                    var meta = metas[link];
+                                    if (meta && meta.getAttribute('href') && meta.getAttribute("text")) {
+                                        var a = document.createElement("a");
+                                        a.href = meta.getAttribute('href');
+                                        var text = document.createTextNode(meta.getAttribute("text"));
+                                        a.appendChild(text);
+                                        var lastTwo = Array.prototype.slice.call(aTags, -2, -1)[0];
+                                        if (meta.getAttribute("position")) {
+                                            lastTwo.parentNode.insertBefore(a, lastTwo.parentNode.children[meta.getAttribute("position") - 1]);
+                                        } else {
+                                            lastTwo.parentNode.insertBefore(a, lastTwo);
+                                        }
+                                    }
+                                }
+                                addLink('addfooterlink1');
+                                addLink('addfooterlink2');
+                            };
+
+                            var hasClass = function (el, cls) {
+                                return -1 < (" " + el.className + " ").indexOf(" " + cls + " ");
+                            };
+                            var addClass = function (el, cls) {
+                                if (!hasClass(el, cls)) {
+                                    el.className += " " + cls;
+                                }
+                            };
+                            var removeClass = function (el, cls) {
+                                if (hasClass(el, cls)) {
+                                    var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+                                    el.className = el.className.replace(reg, " ");
+                                }
+                            };
+                            var navControl = function () {
+                                var showfooternav = metas['showfooternav'];//控制挂件是否显示，默认不显示
+                                var showmorebutton = metas['showmorebutton'];//控制“更多”链接是否显示，默认显示
+                                var showbacktotop = metas['showbacktotop'];//控制“返回顶部”链接是否显示，默认显示
+                                var showshopdetail = metas['showshopdetail'];//控制“店铺首页”链接是否显示，默认不显示
+
+                                var footerNav = document.getElementById("footernav");//整个底部
+                                var navList = document.getElementById("navlist");//底部菜单
+
+                                if (showfooternav && showfooternav.getAttribute("show") === "true") {
+                                    footerNav.style.display = "block";
+                                } else {
+                                    return false;
+                                }
+                                if (showbacktotop && showbacktotop.getAttribute("show") === "false") {
+                                    document.getElementById("backtotop").style.display = "none";
+                                } else {
+                                    document.addEventListener("scroll", function () {
+                                        navList.style.display = "none";
+                                        if ((document.body.scrollTop ? document.body.scrollTop : document.documentElement.scrollTop) >= 50) {
+                                            addClass(footerNav, "mod_aside_top_active");
+                                        } else {
+                                            removeClass(footerNav, "mod_aside_top_active");
+                                        }
+                                    });
+                                    document.getElementById("backtotop").addEventListener("click", function () {
+                                        if (document.body.scrollIntoView) {
+                                            document.body.scrollIntoView();
+                                        } else {
+                                            document.body.scrollTop = 0; //IE传统盒模型，如果是标准盒模型应该用document.documentElement.scrollTop=0;
+                                        }
+
+                                    });
+                                }
+                                if ((showmorebutton && showmorebutton.getAttribute("show") === "false") || isPaipaiAPP || window.newfooter) {
+                                    document.getElementById("morebutton").style.display = "none";
+                                    return;
+                                }
+
+                                document.getElementById("morebutton").addEventListener("click", function () {
+                                    navList.style.display = navList.style.display === "none" ? "block" : "none";
+                                });
+
+                                if (showshopdetail && showshopdetail.getAttribute("show") === "true") {
+                                    document.getElementById('pagenavlink2').style.display = "";
+                                }
+                            };
+
+                            footerControl();
+                            navControl();
+                        })()
+                        return arguments.callee;
+                    })();
+                </script>
+                <!-- 京东流量统计上报 -->
+                <script type="text/javascript">
+                    function getCookie(name) {
+                        var nameEQ = name + "=";
+                        var ca = document.cookie.split(';');
+                        for (var i = 0; i < ca.length; i++) {
+                            var c = ca[i];
+                            while (c.charAt(0) == ' ') {
+                                c = c.substring(1, c.length);
+                            }
+                            if (c.indexOf(nameEQ) == 0) {
+                                return unescape(c.substring(nameEQ.length, c.length)); // 解码并截取我们要值
+                            }
+                        }
+                        return false;
+                    }
+                    var uin = getCookie("wg_uin") || getCookie("buy_uin") || getCookie("uin") || "";
+                    if (uin && uin.indexOf("o0") == 0) {
+                        uin = uin.substring(2);
+                    };
+                    var itemId = '';
+                    var shopId = '';
+                    var orderId = '';
+
+                    if (window.$HEADER_CONFIG) {
+                        itemId = window.$HEADER_CONFIG.itemId || '';
+                        shopId = window.$HEADER_CONFIG.shopId || '';
+                        orderId = window.$HEADER_CONFIG.orderId || '';
+                    };
+
+                    var jap = {
+                        siteId: 'JA2015_221201',
+                        topic: 'traffic-ppm',
+                        account: uin,
+                        skuid: itemId,
+                        shopid: shopId,
+                        orderid: orderId,
+                        adsCookieName: ''
+                    };
+                    (function () {
+                        var ja = document.createElement('script');
+                        ja.type = 'text/javascript';
+                        ja.async = true;
+                        ja.src = ('https:' == document.location.protocol ? 'https://miscssl' : 'http://misc') + '.360buyimg.com/jdf/1.0.0/unit/ja/1.0.0/ja.js';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(ja, s);
+                    })();
+                </script>
+                <!--[if !IE]>|xGv00|37b28d3c6e5b628120ae7cc82c808f03<![endif]-->
+            </div>
+
+            <div class="mask" event-point="filter:cancel"></div>
+        </div>
+
+
+        <div class="filter_wrap" id="filter_comm_wrap" elem-point="filter_comm_wrap" style="display: block; min-height: 1080px;">
+            <div class="filter_hd_wrap mod_bar no_attr" elem-point="filter_hd">
+                <a href="javascript:void(0)" class="btn_filter_select cur" event-point="filter:select">选项</a>
+                <a href="javascript:void(0)" class="btn_filter_attr" event-point="filter:attr">属性</a>
+                <a href="javascript:void(0)" class="btn_filter_confirm" event-point="filter:confirm">确定</a>
+                <a href="javascript:void(0)" class="btn_filter_clear" event-point="filter:clear" elem-point="filter_clear" style="display: none;">清空</a>
+            </div>
+            <div class="filter_bd_wrap filter_select_wrap" elem-point="filter_select">
+                <div class="row_unit promo_unit" elem-point="promo_fliter_wrap">
+                    <div class="row_title">选择优惠活动</div>
+                    <div class="row_content">
+                        <a class="row_cell expinsive_cell">
+                            <span filter-point="property:288230376151711744" style="display: none" report-point="filter:promo:expinsive">拍便宜</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="property:2305843009213693952" report-point="filter:promo:fee">运费险</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="property:16" report-point="filter:promo:ems">包邮</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="payType:2" report-point="filter:promo:cash">货到付款</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="degree:2" report-point="filter:promo:second">二手</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row_unit cate_unit" elem-point="category_fliter_wrap">
+                </div>
+
+                <div class="row_unit addr_unit" elem-point="address_fliter_wrap">
+                    <div class="row_title">所在地</div>
+                    <div class="row_content">
+                        <a class="row_cell">
+                            <span filter-point="address:%B1%B1%BE%A9" report-point="filter:addr" report-data="北京,1">北京</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%C9%CF%BA%A3" report-point="filter:addr" report-data="上海,2">上海</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%B9%E3%D6%DD" report-point="filter:addr" report-data="广州,3">广州</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%C9%EE%DB%DA" report-point="filter:addr" report-data="深圳,4">深圳</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%BD%AD%D5%E3%BB%A6" report-point="filter:addr" report-data="江浙沪,5">江浙沪</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%D6%E9%C8%FD%BD%C7" report-point="filter:addr" report-data="珠三角,6">珠三角</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%B8%DB%B0%C4%CC%A8" report-point="filter:addr" report-data="港澳台,7">港澳台</span>
+                        </a>
+                        <a class="row_cell">
+                            <span filter-point="address:%BA%A3%CD%E2" report-point="filter:addr" report-data="海外,8">海外</span>
+                        </a>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_title">所在省份</div>
+                            <div class="inner_row_content">
+                                <span class="addr_en">A</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B0%B2%BB%D5" report-point="filter:addr" report-data="安徽,9">安徽</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B0%C4%C3%C5" report-point="filter:addr" report-data="澳门,10">澳门</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">B</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%D6%D8%C7%EC" report-point="filter:addr" report-data="重庆,11">重庆</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">F</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B8%A3%BD%A8" report-point="filter:addr" report-data="福建,12">福建</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">G</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B8%CA%CB%E0" report-point="filter:addr" report-data="甘肃,13">甘肃</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B9%E3%B6%AB" report-point="filter:addr" report-data="广东,14">广东</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B9%E3%CE%F7" report-point="filter:addr" report-data="广西,15">广西</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%B9%F3%D6%DD" report-point="filter:addr" report-data="贵州,16">贵州</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">H</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BA%A3%C4%CF" report-point="filter:addr" report-data="海南,17">海南</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BA%D3%B1%B1" report-point="filter:addr" report-data="河北,18">河北</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BA%D3%C4%CF" report-point="filter:addr" report-data="河南,19">河南</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BA%DA%C1%FA%BD%AD" report-point="filter:addr" report-data="黑龙江,20">黑龙江</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BA%FE%B1%B1" report-point="filter:addr" report-data="湖北,21">湖北</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BA%FE%C4%CF" report-point="filter:addr" report-data="湖南,22">湖南</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">J</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BD%AD%CB%D5" report-point="filter:addr" report-data="江苏,23">江苏</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BD%AD%CE%F7" report-point="filter:addr" report-data="江西,24">江西</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%BC%AA%C1%D6" report-point="filter:addr" report-data="吉林,25">吉林</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">L</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C1%C9%C4%FE" report-point="filter:addr" report-data="辽宁,26">辽宁</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">N</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C4%DA%C3%C9%B9%C5" report-point="filter:addr" report-data="内蒙古,27">内蒙古</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C4%FE%CF%C4" report-point="filter:addr" report-data="宁夏,28">宁夏</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">A</span>
+                                <div class="addr_content">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">Q</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C7%E0%BA%A3" report-point="filter:addr" report-data="青海,29">青海</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">S</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C9%BD%B6%AB" report-point="filter:addr" report-data="山东,30">山东</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C9%BD%CE%F7" report-point="filter:addr" report-data="山西,31">山西</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%C9%C2%CE%F7" report-point="filter:addr" report-data="陕西,32">陕西</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%CB%C4%B4%A8" report-point="filter:addr" report-data="四川,33">四川</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">T</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%CC%EC%BD%F2" report-point="filter:addr" report-data="天津,34">天津</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%CC%EC%BD%F2" report-point="filter:addr" report-data="台湾,35">台湾</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">X</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%CE%F7%B2%D8" report-point="filter:addr" report-data="西藏,36">西藏</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%D0%C2%BD%AE" report-point="filter:addr" report-data="新疆,37">新疆</span>
+                                    </a>
+                                    <a class="row_cell">
+                                        <span filter-point="address:%CF%E3%B8%DB" report-point="filter:addr" report-data="香港,38">香港</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">Y</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%D4%C6%C4%CF" report-point="filter:addr" report-data="云南,39">云南</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_row_unit">
+                            <div class="inner_row_content">
+                                <span class="addr_en">Z</span>
+                                <div class="addr_content">
+                                    <a class="row_cell">
+                                        <span filter-point="address:%D5%E3%BD%AD" report-point="filter:addr" report-data="浙江,40">浙江</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="btn_filter_more" event-point="filter:more" report-point="filter:address:btn">查看所有省份<i class="icon_filter_more"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="filter_bd_wrap filter_attr_wrap" elem-point="filter_attr">
+            </div>
+        </div>
+
+
+
+
+        <div class="mod_aside mod_aside_top_active" id="mod_aside" elem-point="aside_wrap">
+            <a href="javascript:void(0);" class="mod_aside_top" report-point="aside:return" event-point="aside:return">返回顶部</a>
+        </div>
+
+    </div>
+
+    <div class="component_wrap">
+        <div class="load_done" id="load_done" elem-point="load_done">
+            <p>加载完毕</p>
+        </div>
+
+        <div class="empty_result" elem-point="filter_empty_comm">
+            <p>抱歉，没有找到符合条件的商品。</p>
+        </div>
+        <div class="empty_result" elem-point="filter_empty_shop">
+            <p>筛选条件加的太多啦，未找到<em></em>相关店铺</p>
+        </div>
+
+        <div class="empty_result comm_empty_part" id="comm_empty_part" elem-point="shop_comm_empty">
+            <p>很抱歉，本店没有找到<em></em>相关商品</p>
+        </div>
+
+        <div class="empty_result comm_empty_all" id="comm_empty_all" elem-point="global_comm_empty">
+            <p>很抱歉，没有找到<em></em>相关商品</p>
+        </div>
+
+        <div class="empty_result shop_empty" id="shop_empty" elem-point="global_shop_empty">
+            <p>很抱歉，没有找到<em></em>相关店铺</p>
+        </div>
+
+        <div class="global_promo" id="all_promo" elem-point="global_promo">
+            <p>为您推荐其他拍拍小店的<em></em></p>
+        </div>
+    </div>
+
+    <!---------------- 前端模板 ---------------->
+    <!-- 公共输出 -->
+    <script type="text/search-tpl" id="aside_tpl" elem-point="aside_tpl">
+		[[#item]]
+			<a href="[[link]]" report-point="[[name]]" class="mod_bar2_menulist_item mod_bar2_menulist_item[[#index]][[/index]]">[[txt]]</a>
+		[[/item]]
+    </script>
+    <!-- 公共输出 -->
+
+    <!-- landingpage 输出 -->
+
+    <script type="text/search-tpl" id="ld_tpl" elem-point="ld_tpl">
+		<div class="slider swiper-container swipe">
+			<div class="pic_list swiper-wrapper swipe-wrap">
+                [[#item]]
+                [[/item]]
+            </div>
+			<div class="bar_wrap pagination">
+			</div>
+		</div>
+		<div class="buy_area">
+			<div class="fn_wrap fn_wrap_paipai">
+		        <h1 class="fn" id="itemName">[[comm_name]]</h1>
+		        <a href="javascript:void(0);" class="sharebtn_wrap" nofx="true"  event-point="in_fav">
+	               <div class="txt">关注</div>
+		        </a>
+		    </div>
+			<div class="ld_comm_detail">
+				<div class="ld_comm_price ld_comm_detail_row retail_price">
+					价格：
+					<strong>
+						&yen;
+						<em>[[price]]</em>
+					</strong>
+				</div>
+				<div class="ld_comm_sale ld_comm_detail_row">
+					销量：[[sale]]
+				</div>
+			</div>
+			<div class="ld_action">
+				<a class="icon_buy"  href="[[href]]" event-point="in_cart">立即购买</a>
+			</div>
+		</div>
+		<p class="ld_result_txt" >
+			相关搜索结果
+		</p>
+    </script>
+    <script type="text/search-tpl" elem-point="alert_tpl">
+		<div class="mod_confirm mod_confirm2" remove-point>
+			<div class="mod_confirm_hd">[[title]]</div>
+			<div class="mod_confirm_bd">
+				<p class="mod_confirm_txt">[[text]]</p>
+			</div>
+			<div class="mod_confirm_ft">
+				<a href="javascript:void(0)" class="mod_confirm_btn1" event-point="alert_cancel">取消</a>
+			</div>
+		</div>
+    </script>
+    <script type="text/javascript" src="http://static.paipaiimg.com/fd/qqpai/search/1.0.2/min/js/lib/swiper.js" charset="utf-8"></script>
+
+    <!--[if !IE]>|xGv00|9d7a7ba63fb77e400217a512e0d3f48b<![endif]-->
+
+    <!-- landingpage 输出 -->
+
+    <!-- 全站商品输出 -->
+    <script type="text/search-tpl" id="ship_tpl" elem="ship_tpl">
+		<a class="ship_shop_wrap">
+			<div class="shop_cover">
+				<span class="shop_tag"></span>
+				<img src="[[shopImgUrl]]">
+			</div>
+			<div class="shop_detail">
+				<p class="shop_title">[[shopName]]</p>
+				<p class="shop_rate">
+					<span class="rate_star">
+						<strong style="width:[[shopComRate]]%"></strong>
+					</span>
+					<span class="rate_scroe">[[shopComScore]]</span>
+				</p>
+				[[#handleLoc]][[/handleLoc]]
+				[[#salesNum]][[/salesNum]]
+			</div>
+		</a>
+    </script>
+    <script type="text/search-tpl" id="piece_tpl" elem-point="piece_tpl">
+		<div class="piece_item">
+			<div class="piece_hd_wrap">
+				<h3>试试搜这个</h3>
+			</div>
+			<div class="piece_bd_wrap">
+				[[#item]]
+					<a style="[[#handleBorder]][[/handleBorder]]" href="[[#handleLink]][[/handleLink]]" report-point="piece" report-data="[[#handlePosition]][[/handlePosition]],[[word]]">[[#handleName]][[/handleName]]</a>
+				[[/item]]
+			</div>
+		</div>
+    </script>
+    <script type="text/search-tpl" id="filter_cate_tpl" elem-point="filter_cate_tpl">
+		<div class="row_title">[[name]]</div>
+		<div class="row_content" id="category_filter">
+			<div class="cell_wrap">
+				[[#item]]<a class="row_cell"><span filter-point="[[prop]]:[[attrId]],[[clusterId]]" [[#handleReport]][[/handleReport]] report-data="[[attrId]]-[[clusterId]],[[clusterName]],[[#handlePosition]][[/handlePosition]]">[[clusterName]]</span></a>[[/item]]
+			</div>
+		</div>
+		<a href="javascript:void(0)" class="btn_filter_more" event-point="filter:more">
+			查看所有[[btnName]]<i class="icon_filter_more"></i>
+		</a>
+    </script>
+    <!-- 全站商品输出 -->
+
+    <!-- 店铺搜索输出 -->
+    <script type="text/search-tpl" id="page_shop_tpl" elem-point="page_shop_tpl">
+		<div class="page_item" >
+			[[#item]]
+			<a class="shop_unit" href="[[shopUrl]]" report-point="[[point]]" report-data="[[pvid]],[[source]],[[shopUin]],[[#handlePosition]][[/handlePosition]],[[page]],[[total]],[[row]]">
+				<div class="shop_unit_inner">
+					<p class="shop_cover">
+						<img src="[[shopImgUrl]]" alt="shopName">
+					</p>
+					<div class="shop_detail">
+						<p class="shop_title">[[#handleShip]][[/handleShip]][[#handleName]][[/handleName]]</p>
+						<p class="shop_rate">
+							<span class="rate_star">
+								<strong style="width:[[shopComRate]]%"></strong>
+							</span>
+							<span class="rate_scroe">[[shopComScore]]</span>
+						</p>
+						[[#handleLoc]][[/handleLoc]]
+						[[#salesNum]][[/salesNum]]
+					</div>
+				</div>
+			</a>
+			[[/item]]
+		</div>
+    </script>
+    <!-- 店铺搜索输出 -->
+    <!-- 旗舰店优化 -->
+    <script type="text/search-tpl" id="page_shop_up_tpl" elem-point="page_shop_up_tpl">
+		[[#item]]
+		<div class="PHM_search_ship [[#linkStyleType]][[/linkStyleType]]">
+			<h3 class="title"><a href="[[shopUrl]]"><span class="title_txt">[[&shopName]]</span><i class="icon_shipshop"></i></a></h3>
+			<a href="[[shopUrl]]"><img src="[[brand_image]]" alt="[[shopName]]" class="ship_logo" /></a>
+			<div class="title_area">
+				[[#style.content]]
+				<h4><a class="[[#colorStyle]][[/colorStyle]]" href="[[url]]"><i class="PSC_ico [[#iconStyle]][[/iconStyle]]"></i>[[title]]</a></h4>
+				[[/style.content]]
+			</div>
+			<ul class="separate [[#separateColor]][[/separateColor]] [[#separatebgColor]][[/separatebgColor]]">
+				[[#keyword.content]]
+					<li class="list">
+						<a href="[[url]]" class="name">[[word]]</a>
+					</li>
+				[[/keyword.content]]
+			</ul>
+		</div>
+		[[/item]]
+    </script>
+    <!-- 旗舰店优化 -->
+
+    <!-- 商品搜索输出 -->
+    <script type="text/search-tpl" id="delete_tpl" elem-point="delete_tpl">
+		<div class="delete_hd">
+			<h2>[[#handleWord]][[/handleWord]]</h2>
+		</div>
+		<div class="delete_bd">
+			[[#handleCommTpl]][[/handleCommTpl]]
+		</div>
+		<div class="delete_ft">
+			[[#handleFootTpl]][[/handleFootTpl]]
+		</a>
+		</div>
+    </script>
+    <script type="text/search-tpl" id="delete_foot_tpl" elem-point="delete_foot_tpl">
+		<a href="[[btnLink]]" class="mod_vmore" report-point="delete:btn">
+			<span class="mod_vmore_txt">查看全部[[btnTotal]]个搜索结果</span>
+		<i class="mod_vmore_arrow"></i>
+    </script>
+
+    <script type="text/search-tpl" id="page_comm_tpl" elem-point="page_comm_tpl">
+		<div class="page_item">
+			[[#item]]
+			<a class="comm_unit" href="[[#handleLink]][[/handleLink]]" report-point="[[point]]" report-data="[[pvid]],[[source]],[[LeafClassId]],[[commId]],[[#handlePosition]][[/handlePosition]],[[page]],[[total]],[[row]],[[#handleType]][[/handleType]]">
+				[[#handlePromo]][[/handlePromo]]
+				<div class="comm_cover">
+					<p>
+						<img data-original="[[#handleImage]][[/handleImage]]" src="http://static.paipaiimg.com/fd/wd/h5/base/img/1x1.gif" alt="">
+					</p>
+					[[#handleState]][[/handleState]]
+				</div>
+				<p class="comm_title">[[#handleTitle]][[/handleTitle]]</p>
+				<p class="comm_price">
+					<span class="retail_price">
+						<strong>
+							&yen;
+							<em>[[#handlePrice]][[/handlePrice]]</em>
+						</strong>
+					</span>
+					<span class="market_price">
+						<strong>
+							&yen;
+							<del>[[MarketPrice]]</del>
+						</strong>
+					</span>
+				</p>
+				[[#handleSale]][[/handleSale]]
+			</a>
+			[[/item]]
+		</div>
+    </script>
+
+    <!-- 商品搜索输出 -->
+
+    <!-- 店铺内搜索输出 -->
+
+    <!-- 店铺内搜索输出 -->
+
+    <script type="text/javascript" src="http://static.paipaiimg.com/fd/qqpai/search/1.0.3/min/js/libs.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://static.gtimg.com/js/version/201412/paipai.h5.share.v3.201412091443.js" charset="utf-8"></script>
+    <!--[if !IE]>|xGv00|58ce258674d3fc696971f54e19ebe807<![endif]-->
+    <script>window["PP.mobile.report.time"] = [new Date()]</script>
+    <script id="legos:22308" ver="22308:20141208:20150420135905" name="PP.mobile.report" src="http://static.paipaiimg.com/js/version/2014/12/pp.mobile.report.20141208.js?t=20150420135905" charset="gbk"></script>
+    <!--[if !IE]>|xGv00|45f1bbe8d8c6b83fddc4954ae6acee09<![endif]-->
+    <script type="text/javascript">
+        SMARTBOX_CONFIG = (function () {
+            var _main_container,
+                options;
+
+            return options = {
+                container: '#smartbox_wrap',
+                scene: 2,//根据场景输出:  4 店内商品 ; 3 店铺 ; 2 全站商品
+                shopid: '',
+                searchEntrance: '#J_searchEnter',
+                keyword: _SEARCH_DATA.keyword,
+                onShow: (function () {
+                    if (Manager) {
+                        if (!Manager.ctrl.get('locked')) {
+                            Manager.ctrl.set('locked', true);
+                        }
+                    }
+
+                    this.options.container = Manager.Info.get('globalsearch') == '0' ? '#smartbox_wrap' : '';
+
+                    _main_container = _main_container || (Manager.Info.get('globalsearch') == '1' ? $('#main-container') : $('#search_bd_wrap'));
+                    _main_container.hide();
+                }),
+                onHide: function () {
+                    if (Manager) {
+                        Manager.ctrl.set('locked', false);
+                    }
+                    _main_container = _main_container || (Manager.Info.get('globalsearch') == '1' ? $('#main-container') : $('#search_bd_wrap'));
+                    _main_container.show().find('img').lazyload();
+                }
+            }
+        })();
+    </script>
+
+    <!-- 店铺内搜索输出 -->
+
+    <!-- 店铺内搜索输出 -->
+
+    <!-- 全站搜索输出 -->
+
+    <script type="text/javascript" charset="utf-8" src="http://static.paipaiimg.com/fd/qqpai/base/js/pp.h5searchpanel.js?v=201503061434"></script>
+    <!--[if !IE]>|xGv00|1dc94e223107e33e241089822f006c69<![endif]-->
+
+    <!-- 全站搜索输出 -->
+
+    <script type="text/javascript" src="http://static.paipaiimg.com/fd/qqpai/search/1.0.3/min/js/search.js?t=201503131015" charset="utf-8"></script>
+    <!--[if !IE]>|xGv00|9a71f544bbb33326904320318469c12b<![endif]-->
+    <script type="text/javascript">
+        try {
+            Manager.emit('main.init', _SEARCH_DATA)
+        } catch (e) {
+            console.error('can not call');
+        }
+    </script>
+    <!-- 172.25.71.76 33ms|BT:2015-05-06 10:44:03 V2.3.4-->
+
+</body>
+</html>

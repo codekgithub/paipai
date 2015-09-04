@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/order.css" rel="stylesheet" />
+</head>
+<body ontouchstart="" mycollectionplug="bind">
+    <!--加载中模块B-->
+
+
+    <script type="text/javascript">
+        function onImgerr(e) {
+            var t = e.target;
+            t.removeAttribute('onerror');
+            t.removeAttribute('onabort');
+            t.onerror = t.onabort = null;
+            t.setAttribute('src', t.getAttribute('def_img') || 'http://static.paipaiimg.com/v5/img/init_img.png');
+        }
+    </script>
+    <div class="mod_container">
+        <div class="mod_bar2" header="true"><a class="mod_bar2_back" ptag="12479.32.2" back="true" href="javascript:;">返回</a><h2 class="mod_bar2_tit" headertitle="true">拍拍-我的订单</h2>
+            <a href="javascript:;" class="mod_bar2_menu" ptag="12479.32.7" more="true">菜单<span class="mod_bar2_menunum" id="headerMenuBtnNum">1</span></a><div id="headerdropdown" class="mod_bar2_menulist"><a href="http://www.paipai.com/m2/index.html?ptag=12479.32.8" moniter="true" class="mod_bar2_menulist_item mod_bar2_menulist_item1">拍拍首页</a><a href="http://m2.paipai.com/my/index.shtml?ptag=12475.19.12" id="headerMenuMyPaiPaiLink" moniter="true" class="mod_bar2_menulist_item mod_bar2_menulist_item2">我的拍拍<span class="mod_bar2_menunum" id="headerMenuListNum">1</span></a><a href="http://m2.paipai.com/cart/index.shtml?ptag=12479.32.10" moniter="true" class="mod_bar2_menulist_item mod_bar2_menulist_item3">我的购物车</a></div>
+        </div>
+        <script>
+            var $HEADER_CONFIG = {
+                type: 'B',
+                middle: '拍拍-我的订单',
+                left: 'back'
+            };
+        </script>
+        <script src="http://s.paipaiimg.com/js/version/201505/common/header.201505261553.js" type="text/javascript" charset="utf-8" title="公共头部js"></script>
+
+
+
+        <!--顶部分类tab B-->
+        <div class="mod_nav nav">
+            <div class="mod_nav_lk">
+                <a href="#" class="mod_nav_item" tabidx="1"><span class="nav_txt">全部订单</span></a>
+                <a href="#" class="mod_nav_item mod_nav_cur" tabidx="2"><span class="nav_txt nav_payment">待付款<b class="nav_payment_num" style="display: none;"></b></span></a>
+                <a href="#" class="mod_nav_item" tabidx="3"><span class="nav_txt nav_receiving">待收货<b class="nav_receiving_num" style="display: none;"></b></span></a>
+                <a href="#" class="mod_nav_item" tabidx="4"><span class="nav_txt nav_receiving">待评价<b class="nav_pinjia_num" style="display: none;"></b></span></a>
+            </div>
+        </div>
+        <div class="tips">若需售后请在电脑登录paipai.com进行操作</div>
+        <!--顶部分类tab E-->
+        <script type="text/templator" id="tmp_order">
+            <div class="order" data-shop_id="<%=seller_uin%>" data-deal_id="<%=deal_id%>" data-jddeal="<%=jdDeal%>">
+                <div class="order_hd">
+                    <a href="<%=(seller_uin?(" http://shop.paipai.com/"+seller_uin):'')%>" class="order_shop"><span><%=(shop_name || seller_nick)%></span></a>
+                    <a href="javascript:///" class="order_follow" style="display:none;" data-uin="<%=seller_uin%>" data-flag="0"><i></i><span>关注服务号</span></a>
+                    <div class="order_id">
+						<a href="<%=dealdetail_url%>"><span class="order_id_num">订单编号：<%=deal_id%><%if(iswxsk){%><i class="order_pay_ico"></i><%}%></span></a>
+                    </div>
+                </div>
+                <div class="order_bd">
+                    <div class="order_glist order_glist_less">
+                        <%var fee=0;%>
+                            <%for(var it,i=0,il=trade_list.length;i<il,it=trade_list[i];i++){%>
+                                <div class="order_goods">
+                                    <div class="order_goods_img"><img src="<%=it.item_pic%>" onerror="javascript:onImgerr(event);" onabort="javascript:onImgerr(event);" alt="">
+                                    </div>
+                                    <div class="order_goods_info">
+                                        <div class="order_goods_name">
+                                            <%=it.item_title%>
+                                        </div>
+                                        <div class="order_goods_attr">
+                                            <div class="order_goods_attr_item">
+                                                <div class="order_goods_price"><i>￥</i>
+                                                    <%=it.item_price.toFixed(2)%><i>/件</i>
+                                                </div>
+                                                <%=it.strProps%>数量：
+                                                    <%=it.item_cnt%>
+                                            </div>
+                                        </div>
+										<%if(ismaimang){%>
+										<div class="order_goods_awn"><span class="order_goods_awn_txt">来自麦芒：朋友们的读书事</span></div>
+										<%}%>
+                                        <!--抢购暂无判断规则
+                                        <div class="order_goods_grab"><span class="order_goods_grab_txt">抢购</span></div>
+                                        -->
+                                    </div>
+                                </div>
+                                <%}%>
+                    </div>
+                    <%if(trade_list.length>2){%>
+                        <div class="order_vmore" data-item_num="<%=(trade_list.length-2)%>">显示其余<%=(trade_list.length-2)%>件</div>
+                    <%}%>
+                </div>
+                <div class="order_ft">
+                    <div class="order_total"><span class="order_total_info">共<%=trade_list.length%>件商品，<%if(shipFee){%>运费：<b><i>&yen;</i><%=(shipFee/100).toFixed(2)%></b><%}else{%>免运费<%}%></span><span class="order_price">实付：<b><i>&yen;</i><%=total_price%></b></span>
+                    </div>
+                    <div class="order_opt">
+                        <!-- S 新增用户备注 by Mihan -->
+                        <div class="order_opt_txt">
+                            <span class="order_status<%%>  order_status_sucess<%%>"><%=state_name%><%if(has_redpackage){%><i class="order_status_icon"></i><%}%></span>
+                            <span class="order_opt_txt_mark"><%if(distribute_note){%>备注：<%=distribute_note%><%}%></span>
+                        </div>
+                        <!-- E 新增用户备注 by Mihan  -->
+                        <%if(op_pinjia){%>
+                        <div class="order_opt_r">
+                            <div class="order_opt_tip_txt"><i class="order_status_icon"></i>分享评论拿红包</div>
+                        <%}%>
+                            <div class="order_btn">
+                                <%if(op_cancel){%>
+                                <a href="#" class="order_btn_cancel">取消订单</a>
+                                <%}%>
+								<%if(op_jdrefund){%>
+								<a href="#" class="order_btn_cancel" jdflag=1>申请退款</a>
+								<%}%>
+                                <%if(op_wuliu){%>
+                                <a ptag="12478.1.3" href="./order_wuliu_v2.shtml?deal_id=<%=deal_id%>" class="order_btn_trans">查看物流</a>
+                                <%}%>
+                                <%if(op_pay){%>
+                                <a href="#" class="order_btn_buy order_btn_pay" ptag="12478.1.3">去支付</a>
+                                <%}%>
+                                <%if(op_confirm){%>
+                                <a href="javascript:///" ptag="12478.1.3" class="order_btn_buy order_btn_confirm" data-confirm_btn="<%=deal_id%>">确认收货</a>
+                                <%}%>
+                        <%if(op_pinjia){%>
+                                <div class="order_btn">
+                                <a href="./deal_comment.shtml?deal_id=<%=deal_id%>" class="order_btn_buy order_btn_shaidan">评价晒单</a>
+                                </div>
+                            </div>
+                        <%}%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <div tabidx="1" style="display: none;">
+        </div>
+        <div tabidx="2">
+            <div class="order" data-shop_id="2035892428" data-deal_id="2035892428-20150830-1380878986" data-jddeal="0">
+                <div class="order_hd"><a href=" http://shop.paipai.com/2035892428" class="order_shop"><span>SXLLNS官方旗舰店</span></a>                     <a href="javascript:///" class="order_follow" style="display: none;" data-uin="2035892428" data-flag="0"><i></i><span>关注服务号</span></a>
+                    <div class="order_id"><a href="./orderdetail.shtml?_wv=1&amp;new=1&amp;deal_id=2035892428-20150830-1380878986"><span class="order_id_num">订单编号：2035892428-20150830-1380878986</span></a>                     </div>
+                </div>
+                <div class="order_bd">
+                    <div class="order_glist order_glist_less">
+                        <div class="order_goods">
+                            <div class="order_goods_img">
+                                <img src="http://img4.paipaiimg.com/00000000/item-539FE395-CC4059790000000004010000379BD758.0.jpg.2.jpg" onerror="javascript:onImgerr(event);" onabort="javascript:onImgerr(event);" alt="">
+                            </div>
+                            <div class="order_goods_info">
+                                <div class="order_goods_name">sxllns 男士多功能长款钱包 磨砂真皮复古牛皮男钱夹 男士手拿包                                         </div>
+                                <div class="order_goods_attr">
+                                    <div class="order_goods_attr_item">
+                                        <div class="order_goods_price"><i>￥</i>                                                     158.00<i>/件</i>                                                 </div>
+                                        深棕&nbsp;&nbsp;数量：                                                     1                                             </div>
+                                </div>
+                                <!--抢购暂无判断规则                                         <div class="order_goods_grab"><span class="order_goods_grab_txt">抢购</span></div>                                         -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order_ft">
+                    <div class="order_total"><span class="order_total_info">共1件商品，免运费</span><span class="order_price">实付：<b><i>¥</i>158</b></span>                     </div>
+                    <div class="order_opt">
+                        <!-- S 新增用户备注 by Mihan -->
+                        <div class="order_opt_txt"><span class="order_status  order_status_sucess">待支付</span>                             <span class="order_opt_txt_mark"></span></div>
+                        <!-- E 新增用户备注 by Mihan  -->
+                        <div class="order_btn"><a href="#" class="order_btn_cancel">取消订单</a>                                                                                                                                             <a href="#" class="order_btn_buy order_btn_pay" ptag="12478.1.3">去支付</a>                                                                                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div tabidx="3" style="display: none;">
+        </div>
+        <div tabidx="4" style="display: none;">
+        </div>
+        <!--空数据 B-->
+        <div class="blank blank2" id="blank_info" style="display: none;">订单已全部显示！</div>
+        <!--空数据 E-->
+
+        <div class="tips" id="loadTipWrap" style="text-align: center; display: none;">
+            <img id="loadTipImg" src="http://s.paipaiimg.com/fd/h5/base/img/loading.gif">
+            <a id="loadTipWords" href="javascript:///" style="display: none;"></a>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://b.paipai.com/buyerinfo_ext/getbuyertips?callback=headerGetBuyerTips&amp;_=67324idyb9xb2" charset="utf-8"></script>
+
+    <!-- 确认浮层 -->
+    <div style="display: none; margin: auto; text-align: center;" class="mod_mask" id="floatMask"></div>
+    <div class="mod_confirm" id="floatConfirm" style="display: none;">
+        <div class="mod_confirm_bd">
+            <p class="mod_confirm_txt" id="wx_confirm_cont"></p>
+        </div>
+        <div class="mod_confirm_ft">
+            <a class="mod_confirm_btn1" href="#" id="wx_btn_cancl">取消</a>
+            <a class="mod_confirm_btn2" href="#" id="wx_btn_cfm">确定</a>
+        </div>
+    </div>
+    <div class="mod_mask" style="z-index: 9999;" id="floatConfirm2">
+        <div class="mod_confirm goodsconfirm" style="position: static; margin: 50px auto;">
+            <div class="mod_confirm_hd">成功确认收货</div>
+            <div class="mod_confirm_bd">
+                <p class="mod_confirm_txt" id="wx_confirm_cont2">评论并分享可获得红包，马上就去吧！</p>
+            </div>
+            <div class="mod_confirm_ft">
+                <a href="#" class="mod_confirm_btn2" id="wx_btn_cancl2">返回订单</a>
+                <a href="#" class="mod_confirm_btn2" id="wx_btn_cfm2">评价并分享</a>
+            </div>
+        </div>
+    </div>
+    <!-- 确认浮层 -->
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="http://s.paipaiimg.com/js/module/my/m2/mmodule.js?t=22"></script>
+    <script src="http://s.paipaiimg.com/js/version/201505/common/recommend.201505041817.js" type="text/javascript" charset="utf-8" title="推荐组件"></script>
+
+    <script type="text/javascript">
+        module_config({
+            root: 'http://s.paipaiimg.com/js/module/my/m2',
+            cache: true,
+            'mod_ver': {
+                'uiutils': '150327',
+                'pp.h5.order_list': '0522'
+            }
+        });
+        module_js('pp.h5.order_list');
+    </script>
+    <div id="footernav" style="display: block;" class="mod_aside mod_aside2">
+        <a id="morebutton" class="mod_aside_more" href="javascript:;" style="display: none;"></a>
+        <a id="backtotop" class="mod_aside_top" href="javascript:;"></a>
+        <div id="navlist" style="display: none;" class="mod_aside_item">
+            <a id="pagenavlink0" class="mod_aside_fav" href="http://www.paipai.com/m2/index.html?ptag=12475.19.1">拍拍首页</a>
+            <a id="pagenavlink1" class="mod_aside_fav" href="http://www.paipai.com/m2/ttj/tuan_list.html?_vw=1&amp;ptag=12475.19.7" style="color: #E02428">拍便宜</a>
+            <a id="pagenavlink3" href="http://app.paipai.com/h5/checkDownApp/h5CllApp.xhtml?union_type=f_paipaih52&amp;ptag=12475.19.11">拍拍App</a>
+            <a id="pagenavlink2" style="display: none" class="mod_aside_uc" href="javascript:;">店铺首页</a>
+            <a class="mod_aside_uc" href="http://m.paipai.com/cart/index.shtml?ptag=12475.19.9">我的购物车</a>
+            <a id="pagenavlink5" class="mod_aside_history" href="http://paipai.com/m2/my/fav.shtml?_vw=1&amp;ptag=12475.19.4">我的微店</a>
+            <a id="pagenavlink4" class="mod_aside_uc" href="http://paipai.com/m2/my/order_list.shtml?_vw=1&amp;ptag=12475.19.6">我的订单</a>
+        </div>
+    </div>
+
+    <div class="mod_bi_infos" tb="2">
+        <div id="bi_commodity_2"></div>
+        <div id="bi_shop_2"></div>
+    </div>
+    <div class="mod_footer" id="common_footer">
+        <div class="mod_footer_lk">
+            <a name="footerfirst" href="http://www.paipai.com/m2/index.html?ptag=12475.31.1&amp;_vw=1">拍拍首页</a>
+            <a name="footerprofile" href="http://m2.paipai.com/my/index.shtml?ptag=12475.31.3">我的拍拍</a>
+            <a name="footerindex" style="color: #e02229" href="http://wd.paipai.com/static/wxd/h5.html?chid=47&amp;isrun=1&amp;isjump=1&amp;ptag=12475.31.2&amp;_vw=1">免费开店</a>
+        </div>
+        <div id="footer_logo" class="mod_footer_logo">
+            <a href="http://m.paipai.com?ptag=12475.31.4&amp;_vw=1">
+                <span class="mod_logo"></span>
+            </a>
+        </div>
+    </div>
+    <script src="http://s.paipaiimg.com/js/version/201507/common/footer.201507151038.js" type="text/javascript" charset="utf-8" title="公共底部js"></script>
+
+    <script src="http://static.gtimg.com/js/version/2014/09/ecc.cloud.ppmobilereport.20140905.js?t=201409091150" async="async" type="text/javascript"></script>
+
+
+
+    <style type="text/css">
+        .LoadingBoxMask {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .8;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .LoadingBoxOuter {
+            width: 160px;
+            height: auto;
+            background-color: #fff;
+            border-radius: 8px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -80px;
+            margin-top: -75px;
+            z-index: 1001;
+            -webkit-animation: showLoadingAni 0.3s ease-in-out 0 1;
+            animation: showLoadingAni 0.3s ease-in-out 0 1;
+        }
+
+        @keyframes showLoadingAni {
+            0% {
+                transform: scale(0.5);
+            }
+
+            60% {
+                transform: scale(1.12);
+            }
+
+            90% {
+                transform: scale(0.98);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @-webkit-keyframes showLoadingAni {
+            0% {
+                -webkit-transform: scale(0.5);
+            }
+
+            60% {
+                -webkit-transform: scale(1.12);
+            }
+
+            90% {
+                -webkit-transform: scale(0.98);
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+    </style>
+</body>
+</html>

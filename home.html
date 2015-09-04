@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/index_v3.css" rel="stylesheet" />
+</head>
+<body ontouchstart=""><!--IOS样式hack-->
+<div  id="main_container" class="mod_container">
+	<!--S 公共头 -->
+	<script type="text/javascript">
+	    var $HEADER_CONFIG = {
+	        type: 'A',
+	        left: 'back'
+	    };
+	</script>
+	<script src="http://s.paipaiimg.com/js/version/201505/common/header.201505261553.js" type="text/javascript" charset="utf-8" title="公共头部js"></script>
+
+
+	<!--E 公共头 -->
+	
+	<div class="tips" id="loadTipImg" style="text-align:center;margin:10px auto;">
+        <img src="http://s.paipaiimg.com/fd/h5/base/img/loading.gif" style="width:16px;height:16px;border:0px;">
+    </div>
+
+		<div class="my">
+			<div class="my_head">
+				<div class="my_head_pic"><img id="uinLogo" src="http://qlogo2.store.qq.com/qzone/0/0/50" alt="" class="my_head_img" width="130" height="130"></div>
+				<div class="my_head_info">
+					<h4 class="my_head_name " id="nickname" ></h4>
+					<p class="my_head_prototype" id="uid" style="display:none;"></p>
+				</div>
+			</div>
+			<!--S 显示3列 -->
+			<ul class="my_transaction my_transaction3">
+				<li>
+					<a href="http://m2.paipai.com/my/fav.shtml?_wv=1&tb=1" ptag="12478.4.1">
+						<div class="my_transaction_num" id="fav_shop_total_count" >0</div>
+						<div class="my_transaction_txt">关注的店铺</div>
+					</a>
+				</li>
+				<li>
+					<a href="http://m2.paipai.com/my/fav.shtml?_wv=1&tb=0" ptag="12478.7.1">
+						<div class="my_transaction_num" id="fav_item_total_count" >0</div>
+						<div class="my_transaction_txt">关注的商品</div>
+					</a>
+				</li>
+				<li>
+					<a href="http://star.paipai.com/m2/follow/myFollowStars" ptag="12478.19.1">
+						<div class="my_transaction_num" id="fav_star_total_count" >0</div>
+						<div class="my_transaction_txt">关注的明星</div>
+					</a>
+				</li>
+			</ul>
+			<!--E 显示3列 -->
+		</div>
+		<div class="nav">
+			<ul class="nav_list">
+				<li class="nav_item nav_order" ptag="12478.1.1">
+				<a href="http://m2.paipai.com/my/order_list.shtml?t=1" ptag="12478.1.1">
+					<div class="nav_item_hd">我的订单</div>
+				</a>
+					<div class="nav_item_bd">
+						<a href="http://m2.paipai.com/my/order_list.shtml?t=1" ptag="12478.16.1">
+							<span class="nav_item_txt">全部</span>
+						</a>
+						<a href="http://m2.paipai.com/my/order_list.shtml?t=2" ptag="12478.17.1">
+							<span class="nav_item_txt">待付款<i class="nav_item_num" id="need_pay_count" style="display:none">0</i></span>
+						</a>
+						<a href="http://m2.paipai.com/my/order_list.shtml?t=3" ptag="12478.18.1">
+							<span class="nav_item_txt">待收货<i class="nav_item_num" id="need_recv_count" style="display:none">0</i></span>
+						</a>
+						<a href="http://www.paipai.com/m2/my/order_list.shtml?t=4" ptag="12478.19.1">
+							<span class="nav_item_txt">待评价<i class="nav_item_num" id="need_comment_count" style="display:none">0</i></span>
+						</a>
+					</div>
+				</li>
+				<li class="nav_item nav_chong" style="display:none">
+					<div class="nav_item_hd" >
+						<a id="deal_chong_href" href="http://wd.paipai.com/static/campus_activities/orderList.html?ptag=12478.19.1">
+							我的充值订单
+						</a>
+					</div>
+				</li>
+				<li class="nav_item nav_cheap" ptag="12478.9.1">
+					<div class="nav_item_hd" >
+						<a href="http://www.paipai.com/m2/ttj/tuan_my.html?_wv=1">
+							我的拍便宜 
+						</a>
+					</div>
+				</li>
+				<li class="nav_item nav_cart" ptag="12478.10.1">
+					<div class="nav_item_hd">
+						<a class="list_item" href="http://m2.paipai.com/cart/index.shtml?_wv=1" >
+							我的购物车 
+							<span class="nav_item_tip" id="cart_cmdy_kinds" style="display:none">0 件<span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="nav my_mod_mt">
+			<ul class="nav_list">
+				<li class="nav_item nav_gold" ptag="12478.3.1">
+					<div class="nav_item_hd">
+						<a class="list_item" href="http://m2.paipai.com/my/quan_list.shtml" ptag="12478.3.1">
+							我的券
+							<span class="nav_item_tip" id="cash_coupon_desc" style="display:none">有0张券即将过期哦<span>
+						</a>
+					</div>
+				</li>
+				<li class="nav_item nav_red" ptag="12478.8.1">
+					<div class="nav_item_hd">
+						<a class="list_item" href="http://m.paipai.com/hongbao/my_hb.html?_wv=1&wechat_card_js=1" ptag="12478.8.1">
+							我的红包
+							<span class="nav_item_tip"  id="red_pkg_desc" style="display:none"></span>
+						</a>
+					</div>
+				</li>
+				<li class="nav_item nav_money" ptag="12478.20.1">
+					<div class="nav_item_hd">
+						<a class="list_item" href="http://wd.paipai.com/static/cps/my_money_v2.html" ptag="12478.20.1">
+							我的佣金
+						</a>
+					</div>
+				</li>
+				
+				<li class="nav_item nav_phone hide J_mTel">
+                    <div class="nav_item_hd"><a href="javascript:" class="">我的手机<span class="nav_item_tip J_st">未绑定</span></a></div>
+                </li>
+
+			</ul>
+		</div>
+
+	    <div class="app_hide">
+
+		<div class="markting" id="marketing">
+		<script type="text/tmpl" id="marketing_tmpl">
+			<div class="marketing_list">
+				<a href="<%=ml_href%>" class="marketing_item marketing_l">
+					<h5><%=ml_title%></h5>
+					<p><%=ml_desc%></p>
+				</a>
+				<a href="<%=mr_href%>" class="marketing_item marketing_r">
+					<h5><%=mr_title%></h5>
+					<p><%=mr_desc%></p>
+				</a>
+			</div>
+		</script>
+		</div>
+
+		<!-- S 拍拍网公众号 -->
+		<a href="http://m2.paipai.com/my/fuwuhao.shtml?_wv=1" class="mod_follow" id="fuwuhao" ptag="12478.11.1">
+			<div class="mod_follow_txt">
+				<h3>拍拍网服务号</h3>
+				<p>热门活动推荐\订单查询</p>
+			</div>
+			<!-- 已关注样式：class="mod_follow_btn mod_follow_btn_followed" -->
+			<div class="mod_follow_btn "><i></i><span>关注服务号</span></div>
+		</a>
+		<!-- E 拍拍网公众号 -->
+
+		</div>
+
+
+		<!-- S 退出按钮-->
+		<div class="opt app_hide" id="logoutWrap" style="display:none;">
+			<span href="#" class="mod_btn_normal logout" ptag="12478.6.1">退出登录</span>
+		</div>
+
+		<!--娉ㄩ噴鎺夎疆鎾箍鍛婂姩鐢�--(PS锛氳鏄剧ず鍔ㄧ敾锛屽垹闄ゆ渶澶栧洿鐨刣iv)涔嬫墍浠ヤ繚鐣檇om鏄繚璇佸師鏉ラ儴鍒嗗閮ㄨ皟鐢╠om鐨勪唬鐮佸彲浠ユ甯告墽琛�-->
+<div style="display:none;">
+	<!-- S 杞挱 -->
+	<div class="mod_slider">
+		
+	</div>
+</div>
+<div style="display:none;width:100%;max-width:640px;">
+	<img src="" id="ad_footer_ddecb" url="" />
+</div>
+<script type="text/javascript">
+    (function (window) {
+        var imgU1 = "http://static.paipaiimg.com/fd/paipai/my/img/baner12_2.jpg";
+        var url1 = "http://1212.paipai.com/?ptag=20488.6.1";
+
+        var imgU2 = "http://static.paipaiimg.com/fd/paipai/my/img/baner12_1.jpg";
+        var url2 = "http://1212.paipai.com/?ptag=20488.6.2";
+
+        var img = document.getElementById('ad_footer_ddecb'),
+            d = img.parentNode || img.parentElement;
+
+        img.style.cssText = "width:100%;border:0px;";
+
+
+        var dat1 = new Date('2014/12/08 00:00:00').getTime() / 1000;
+        var dat2 = new Date('2014/12/11 00:00:00').getTime() / 1000;
+
+        var dat3 = new Date('2014/12/11 00:00:00').getTime() / 1000;
+        var dat4 = new Date('2014/12/13 00:00:00').getTime() / 1000;
+
+        var curd = new Date().getTime() / 1000;
+
+
+        var jumpUrl = '';
+        function touchEvt(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            location.href = jumpUrl;
+        }
+
+        //璁㈠崟鍒楄〃鍜岃鍗曡鎯呴〉涓嶆樉绀�
+        var pageUrl = location.href;
+        pageUrl = pageUrl.substr(pageUrl.lastIndexOf('/')).toLowerCase();
+        var showFlag = !pageUrl || (pageUrl.indexOf('/order_list.shtml') != 0 && pageUrl.indexOf('/orderdetail.shtml') != 0);
+
+
+
+        if (showFlag) {
+            if (curd >= dat1 && curd < dat2) {
+                img.setAttribute('src', imgU1);
+                d.style.display = 'block';
+                img.addEventListener('touchend', touchEvt);
+                jumpUrl = url1;
+
+            } else if (curd >= dat3 && curd < dat4) {
+                img.setAttribute('src', imgU2);
+                d.style.display = 'block';
+                img.addEventListener('touchend', touchEvt);
+                jumpUrl = url2;
+            } else {
+                d.remove();
+            }
+        } else {
+            d.remove();
+        }
+    })(window);
+</script>
+
+		<div class="g_tip_layer" style="display:none;">
+			<div class="g_tip">
+				<div class="row">真的退出吗？</div>
+				<div class="row btn_row">
+					<a class="g_tip_btn_promary" href="###" ptag="12478.6.1">退出</a>
+					<a class="g_tip_btn_secondary" href="###">取消</a>
+				</div>
+			</div>
+		</div>
+		<!-- E 退出按钮-->
+
+		<!-- S 公共底部 -->
+		<script src="http://static.gtimg.com/js/version/2014/09/ecc.cloud.ppmobilereport.20140905.js?t=201410281150" type="text/javascript"></script>
+		<div id="footernav" style="display:none" class="mod_aside mod_aside2">
+    <a id="morebutton"  class="mod_aside_more" href="javascript:;"></a>
+    <a id="backtotop" class="mod_aside_top" href="javascript:;"></a>
+    <div id="navlist" style="display:none;" class="mod_aside_item">
+        <a id="pagenavlink0" class="mod_aside_fav" href="http://www.paipai.com/m2/index.html?ptag=12475.19.1" >拍拍首页</a>
+        <a id="pagenavlink1" class="mod_aside_fav" href="http://www.paipai.com/m2/ttj/tuan_list.html?_vw=1&ptag=12475.19.7" style="color:#E02428">拍便宜</a>
+        <a id="pagenavlink3" href="http://app.paipai.com/h5/checkDownApp/h5CllApp.xhtml?union_type=f_paipaih52&ptag=12475.19.11">拍拍App</a>
+        <a id="pagenavlink2" style="display:none" class="mod_aside_uc" href="javascript:;">店铺首页</a>
+        <a class="mod_aside_uc" href="http://m.paipai.com/cart/index.shtml?ptag=12475.19.9">我的购物车</a>
+        <a id="pagenavlink5" class="mod_aside_history" href="http://paipai.com/m2/my/fav.shtml?_vw=1&ptag=12475.19.4">我的微店</a>
+        <a id="pagenavlink4" class="mod_aside_uc" href="http://paipai.com/m2/my/order_list.shtml?_vw=1&ptag=12475.19.6">我的订单</a>
+    </div>
+</div>
+
+<div class="mod_footer" id="common_footer">
+    <div class="mod_footer_lk">
+        <a name="footerfirst" href="http://www.paipai.com/m2/index.html?ptag=12475.31.1&_vw=1">拍拍首页</a>
+        <a name="footerprofile" href="http://m2.paipai.com/my/index.shtml?ptag=12475.31.3">我的拍拍</a>
+        <a name="footerindex" style="color:#e02229" href="http://wd.paipai.com/static/wxd/h5.html?chid=47&isrun=1&isjump=1&ptag=12475.31.2&_vw=1">免费开店</a>
+    </div>
+    <div id="footer_logo" class="mod_footer_logo">
+        <a href="http://m.paipai.com?ptag=12475.31.4&_vw=1">
+            <span class="mod_logo"></span>
+        </a>
+    </div>
+</div>
+<script src="http://s.paipaiimg.com/js/version/201507/common/footer.201507151038.js" type="text/javascript" charset="utf-8" title="公共底部js"></script>
+ 
+<script src="http://s.paipaiimg.com/js/version/201501/common/searchpanel.201501261448.js" type="text/javascript" charset="utf-8" title="搜索浮层"></script>
+ 
+  
+		<!-- E 公共底部 -->
+	</div>
+
+<script type="text/javascript" src="http://static.paipaiimg.com/js/zepto.1.1.3.min.js?t=201407"></script>
+<script type="text/javascript" src="http://static.paipaiimg.com/paipai_h5/js/ttj/shareapi.js"></script>
+<!--<script type="text/javascript">
+    function setCookie(name, value, expires, path, domain, secure) {
+        var exp = new Date(), expires = arguments[2] || null, path = arguments[3] || "/", domain = arguments[4] || null, secure = arguments[5] || false;
+        expires ? exp.setMinutes(exp.getMinutes() + parseInt(expires)) : "";
+        document.cookie = name + '=' + escape(value) + (expires ? ';expires=' + exp.toGMTString() : '') + (path ? ';path=' + path : '') + (domain ? ';domain=' + domain : '') + (secure ? ';secure' : '');
+    }
+    function getCookie(name) {
+        var reg = new RegExp("(^| )" + name + "(?:=([^;]*))?(;|$)"),
+            val = document.cookie.match(reg);
+        return val ? (val[2] ? unescape(val[2]) : "") : null;
+    }
+    function delCookie(name, path, domain, secure) {
+        var value = getCookie(name);
+        if (value != null) {
+            var exp = new Date();
+            exp.setMinutes(exp.getMinutes() - 1000);
+            path = path || "/";
+            document.cookie = name + '=;expires=' + exp.toGMTString() + (path ? ';path=' + path : '') + (domain ? ';domain=' + domain : '') + (secure ? ';secure' : '');
+        }
+    }
+    function getQuery(name, url) {
+        var u = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?") + 1).match(reg);
+        return r != null ? r[2] : "";
+    }
+
+    function getToken() {
+        var skey = getCookie("skey"), token = skey == null ? "" : time33(skey);
+        return token;
+    }
+
+    function time33(str) {
+        //哈希time33算法
+        for (var i = 0, len = str.length, hash = 5381; i < len; ++i) {
+            hash += (hash << 5) + str.charAt(i).charCodeAt();
+        }
+        return hash & 0x7fffffff;
+    }
+
+    function isMQQUserAgent() {
+        if (/qq\/([\d\.]+)*/i.test(navigator.userAgent)) {
+            return true;
+        }
+        return false;
+    }
+
+    function isWx() {
+        var isWX = window.WeixinJSBridge;
+        if (!isWX) {
+            var ua = navigator.userAgent.toLowerCase();
+            isWX = ua.match(/micromessenger/) ? true : false;
+        }
+        return isWX;
+    }
+
+    function isWXD() {
+        var ua = navigator.userAgent;
+        var isWXD = ua.match(/PaipaiWXD/) ? true : false;
+        return isWXD;
+    }
+
+
+    function isPPApp() {
+        var ua = navigator.userAgent;
+        if (/Paipaiapp\//gi.test(ua)) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    //模板渲染
+    function template(tmpId, data, strFlag) {
+        try {
+            strFlag = !!strFlag;
+
+            var strTmp = strFlag ? tmpId : (template['str_' + tmpId] || (template['str_' + tmpId] = $(tmpId).html()));
+            //console.log('模板数据',data,strTmp,tmpId);
+            var funStr = "var p=[],print=function(){p.push.apply(p,arguments);};" +
+					"with(obj){p.push('" + strTmp.replace(/[\r\t\n]/g, " ")
+					.split("<%").join("\t")
+					.replace(/((^|%>)[^\t]*)'/g, "$1\r")
+					.replace(/\t=(.*?)%>/g, "',$1,'")
+					.split("\t").join("');")
+					.split("%>").join("p.push('")
+					.split("\r").join("\\'") + "');}return p.join('');";
+            //console.log('Func',funStr);
+
+            var fn = template[tmpId] || (template[tmpId] = new Function("obj", funStr));
+            return data ? fn(data) : fn;
+        } catch (e) { console.log("Error", e); }
+    };
+
+    function shareFun(url) {
+        shareApi({
+            "url": url,
+            "qq_title": "拍拍网",
+            "qzone_title": "拍拍网",
+            "wechat_title": "拍拍网",
+            "wechat_time_title": "拍拍网 - 京东旗下大型电商平台，更多优惠，更多选择，更加好玩！",
+            "wechat_desc": "京东旗下大型电商平台，更多优惠，更多选择，更加好玩！",
+            "qq_desc": "京东旗下大型电商平台，更多优惠，更多选择，更加好玩！",
+            "qzone_desc": "京东旗下大型电商平台，更多优惠，更多选择，更加好玩！",
+            "img": "http://static.paipaiimg.com/v5/img/init_img.png",
+            "ptag": {
+                w2w: "12475.30.1", //微信分享至微信好友
+                w2t: "12475.30.2", //微信分享至朋友圈
+                //w2b:"",        //微信分享至腾讯微博,如果没有，可不传
+                //w2e:"",        //微信发送邮件，如果没有，可不传
+                q2q: "12475.29.1", //手Q分享至QQ好友或群
+                q2z: "12475.29.2", //手Q分享至QQ空间
+                q2w: "12475.29.3", //手Q分享至微信好友
+                q2t: "12475.29.4"  //手Q分享至朋友圈
+            }
+        });
+    }
+
+    function isQQ(qn) {
+        if (qn && !isNaN(qn)) {
+            return parseInt(qn) < 3900000000;
+        }
+        return false;
+    }
+
+
+    //显示内容区域--初始化隐藏
+    function showContent() {
+        $('#loadTipImg').hide();
+        console.log('-----&gt;Show');
+        bindEvent();
+        $(".mod_slider").show();
+    }
+
+    function initParam() {
+        //获取用户头像昵称等信息
+        getIndvData();
+        //获取各种状态的订单数：订单列表接口
+        getDealList();
+        //校验登陆态，获取用户属性信息及购物车商品数：onlinechecker
+        userOnlineCheck();
+        //获取关注店铺数
+        getFavShop();
+        //获取关注的商品数
+        getFavItem();
+        //获取关注明星数
+        getFavStar();
+        //获取优惠券描述信息
+        getCouponDesc();
+        //获取红包描述信息
+        getHbDesc();
+        //展示market 信息（区分买卖家，展示我要开店分销赚钱等）
+        showMarketInfo();
+        //query if the user has bind mobile
+        showMobBind()
+    }
+
+    function getIndvData() {
+        var url = "http://b.paipai.com/myindex/getindvdata?callback=cb_getIndvData&t=" + (new Date().getTime());
+        $.get(url,
+			function (data) {
+			}
+			, "jsonp");
+    }
+
+    function cb_getIndvData(json) {
+        if (json.ret_code == 13) {
+            if (json.url_redirect.indexOf('rurl') > 0) {
+                location.href = json.url_redirect + encodeURIComponent(location.href.replace(/([?&])sid=[^&]*[&]?/, '$1'));
+            } else {
+                location.href = json.url_redirect + '&rurl=' + encodeURIComponent(location.href.replace(/([?&])sid=[^&]*[&]?/, '$1'));
+            }
+        } else if (json.ret_code == 0) {
+            $("#nickname").html(json.m_strName ? json.m_strName : "拍拍用户");
+            if (json.m_imgPath != '') {
+                $("#uinLogo").attr("src", json.m_imgPath);
+            }
+
+            try {
+                //显示对应的QQ号--2014/12/18
+                if (isQQ(json['uin'])) {
+                    $('#uid').show().text('QQ：' + json.uin);
+                } else {
+                    if (isWx()) {
+                        $('#uid').show().text('微信用户');
+                    } else {
+                        $('#uid').hide().text('');
+                    }
+                }
+            } catch (e) {
+                //alert('---->'+e);
+                console.log('------无效信息' + e);
+            }
+
+            showContent();
+            //$("#waitOrderNum").text("("+(parseInt(json.m_iWaitPay)+parseInt(json.m_iWaitGoods))+")");
+        } else {
+            alert("系统繁忙，请稍后重试！");
+            history.back();
+        }
+    };
+
+    var all_Need_pay_count = 0;//待付款订单总数
+
+    function getDealList() {
+        var url = "http://b.paipai.com/deallist/AllDealList?start_page=1&page_size=5&callback=cb_getDealList&t=" + (new Date().getTime()) + "&g_ty=ls&g_tk=" + getToken();
+        $.get(url,
+			function (data) {
+			}
+			, "jsonp");
+
+        //linfeng-20150604-获取京东的代付款订单的数量
+        var url_jd = "http://jditem.paipai.com/orderweb/orderh5/getOrder?state=1&start_page=1&page_size=5&t=" + (new Date().getTime()) + "&g_ty=ls&g_tk=" + getToken();
+        $.get(url_jd, function (data) {
+            getJDNeed_Pay_Count(data);
+        }, "jsonp");
+    }
+
+    function getJDNeed_Pay_Count(data) {
+        if (data.ret_code == 0) {
+            if (data.need_pay_count > 0) {
+                all_Need_pay_count = data.need_pay_count + all_Need_pay_count;
+                $('#need_pay_count').text(all_Need_pay_count);
+                $('#need_pay_count').show();
+            }
+        }
+    }
+
+    function cb_getDealList(data) {
+        if (data.ret_code == 0) {
+            if (data.need_pay_count > 0) {
+                all_Need_pay_count = data.need_pay_count + all_Need_pay_count;
+                $('#need_pay_count').text(all_Need_pay_count);
+                $('#need_pay_count').show();
+            }
+            if (data.need_recv_count > 0) {
+                $('#need_recv_count').text(data.need_recv_count);
+                $('#need_recv_count').show();
+            }
+            if (data.need_comment_count > 0) {
+                $('#need_comment_count').text(data.need_comment_count);
+                $('#need_comment_count').show();
+            }
+        }
+    }
+
+
+    function getFavStar() {
+        var url = "http://star.paipai.com/m2/follow/getStarNums?callback=?&t=" + (new Date().getTime()) + "&g_ty=ls&g_tk=" + getToken();
+        $.get(url,
+			function (data) {
+			    console.log(data);
+			    if (data.nums > 0) {
+			        var tipWord = '';
+			        tipWord = data.nums;
+			        $('#fav_star_total_count').text(tipWord);
+			        $('#fav_star_total_count').show();
+			    }
+			}
+			, "jsonp");
+    }
+
+    function getFavItem() {
+        var url = "http://my.paipai.com/cgi-bin/favorite_new/GetFavItemInfo?pageSize=1&startPage=1&sortType=0&t=" + (new Date().getTime()) + "&g_ty=ls&g_tk=" + getToken();
+        $.get(url,
+			function (data) {
+			}
+			, "jsonp");
+    }
+
+    function GetFavItemInfoCallBack(data) {
+        console.log(data);
+        if (data.ret_code == 0 && data.total_count != "") {
+            var tipWord = '';
+            tipWord = data.total_count;
+            $('#fav_item_total_count').text(tipWord);
+            $('#fav_item_total_count').show();
+        }
+    }
+
+
+    function getFavShop() {
+        var url = "http://my.paipai.com/cgi-bin/favorite_new/GetFavShopList?callback=GetFavShopCallBack&pageSize=1&startPage=1&sortType=0&t=" + (new Date().getTime()) + "&g_ty=ls&g_tk=" + getToken();
+        $.get(url,
+			function (data) {
+			}
+			, "jsonp");
+    }
+
+    function GetFavShopCallBack(data) {
+        if (data.ret_code == 0 && data.total_count != "") {
+            var tipWord = '';
+            tipWord = data.total_count;
+            $('#fav_shop_total_count').text(tipWord);
+            $('#fav_shop_total_count').show();
+        }
+    }
+
+    function userOnlineCheck() {
+        var onlineCheckUrl = "http://member.paipai.com/cgi-bin/onlinechecker/GetOnlineInfo?callback=?&act=1&t=" + (new Date().getTime()) + "&g_ty=ls&g_tk=" + getToken();
+        $.get(onlineCheckUrl,
+			function (data) {
+			    if (data.errCode == 0) {
+			        var tipWord = '';
+			        tipWord = data.shopCartComdyKinds + '件';
+			        $('#cart_cmdy_kinds').text(tipWord);
+			        $('#cart_cmdy_kinds').show();
+			    }
+			}
+			, "jsonp");
+    }
+
+    function getCouponDesc() {
+        var url = 'http://my.paipai.com/cgi-bin/shopcoupon/CouponState_h5?endtime=0&callback=cb_getCouponDesc&g_ty=ls&g_tk=' + getToken();
+        try {
+            $.get(url,
+                    function (data) {
+                    }
+                    , "jsonp");
+        } catch (e) { console.log("Error", e); }
+    }
+
+    function buyerCouponCallBack(data) {
+        console.log(data);
+        if (data.expire_num > 0) {
+            var tipWord = '';
+            tipWord = '有' + data.expire_num + '张券即将过期哦';
+            $('#cash_coupon_desc').text(tipWord);
+            $('#cash_coupon_desc').show();
+
+        }
+    }
+
+    function getHbDesc() {
+        var url = 'http://b.paipai.com/useraccount/getbalance?callback=cb_getHbDesc&g_ty=ls&g_tk=' + getToken();
+        $.get(url,
+			function (data) {
+			}
+			, "jsonp");
+    }
+
+    function cb_getHbDesc(data) {
+        if (data.code == 0) {
+            var tipWord = '';
+            if (data.optype == 1) {
+                tipWord = '有' + data.big_bonus_totalnum + '个红包待君领取';
+            } else if (data.optype == 2) {
+                tipWord = '￥' + (parseInt(data.little_bonus_money) / 100).toFixed(2) + '即将过期';
+            } else {
+                tipWord = data.balance > 0 ? '￥' + (parseInt(data.balance) / 100).toFixed(2) : '';
+            }
+            if (tipWord != '') {
+                $('#red_pkg_desc').text(tipWord);
+                $('#red_pkg_desc').show();
+            }
+        } else if (data.code == 17005 || data.code == 230) {
+
+        } else if (data.code == 13) {
+            plogin(location.href);
+        } else if (data.code == 228) {
+            console.log('获取数据失败');
+        } else {
+            console.log('系统繁忙，请稍后再试');
+        }
+    }
+    function showMarketInfo() {
+        var isSeller = false;
+
+        try {
+            var mp = getCookie("mp");
+            if (mp.split(":")[0] == 1
+                || mp.split(":")[1] == 1
+                || mp.split(":")[2] == 1
+              ) {
+                isSeller = true;
+            }
+        } catch (e) { console.log("Error", e); }
+
+        var buyer_market = {
+            ml_href: "http://m2.paipai.com/market/index.shtml",
+            ml_title: "我要赚钱",
+            ml_desc: "亿万佣金等你拿",
+            mr_href: "http://wd.paipai.com/static/wxd/h5.html?chid=25&PTAG=12478.14.1",
+            mr_title: "我要开店",
+            mr_desc: "一键开店当老板"
+        };
+
+        var seller_market = {
+            ml_href: "http://m2.paipai.com/market/index.shtml",
+            ml_title: "我要分销",
+            ml_desc: "0投入、爱分享、赚大钱",
+            mr_href: "http://wd.paipai.com/mshop/" + getCookie("wg_uin") + "?PTAG=12478.15.1 ",
+            mr_title: "我的店铺",
+            mr_desc: "查看，分享我的店铺",
+        };
+
+        if (isSeller) {
+            console.log("isSeller");
+            $("#marketing").html(template("#marketing_tmpl", seller_market));
+        } else {
+            console.log("isBuyer");
+            $("#marketing").html(template("#marketing_tmpl", buyer_market));
+        }
+    }
+
+    function bindEvent() {
+        if (isMQQUserAgent()) {
+            $("#fuwuhao").hide();
+            $("#logoutWrap").hide();
+            shareFun("http://www.paipai.com/m2/ttj/tuan_list.html?_wv=1");
+        } else if (isWx()) {
+            $("#logoutWrap").hide();
+            shareFun("http://m2.paipai.com/index.html?_wv=1");
+            $("#fuwuhao")[0].href = "http://mp.weixin.qq.com/s?__biz=MjM5MTI5NjI2MA==&mid=200860965&idx=1&sn=0608e210f97905d61f6b446daf098ff7&PTAG=12478.11.1#rd";
+
+            $("#deal_chong_href").href = "http://virtualorder.paipai.com/h5/list?showwxpaytitle=1&ptag=12478.19.2";
+            $(".nav_chong").show();
+        } else if (isWXD()) {
+            $("#deal_chong_href").href = "http://wd.paipai.com/static/campus_activities/orderList.html?ptag=12478.19.1";
+            $(".nav_chong").show();
+        } else {
+            $("#logoutWrap").show();
+        }
+        $(document).on("tap", ".logout", function () {
+            $('.g_tip_layer').show();
+        });
+        $(".g_tip_btn_promary").click(function () {
+            delCookie("wg_uin", "/", ".paipai.com");
+            delCookie("wg_skey", "/", ".paipai.com");
+            delCookie("p_uin", "/", ".paipai.com");
+            delCookie("p_skey", "/", ".paipai.com");
+            delCookie("uin", "/", ".paipai.com");
+            delCookie("skey", "/", ".paipai.com");
+            //location.href="http://m2.paipai.com/index.html?_wv=1";
+            location.href = "http://www.paipai.com/m2/index.html?_wv=1";//linfeng--20150603
+            return false;
+        });
+        $(".g_tip_btn_secondary").click(function () {
+            $('.g_tip_layer').hide();
+            return false;
+        });
+    }
+
+    function showMobBind() {
+        var $bindHref = $('.J_mTel')
+        $.ajax({
+            url: 'http://wd.paipai.com/wxd/user/getbindinfo',
+            data: {
+                source: 'h5_centerinfo'
+            },
+            type: 'post',
+            dataType: 'jsonp',
+            timeout: 10000,
+            success: function (data) {
+                if (data.ret == 0) {
+                    $bindHref.removeClass('hide')
+                    //data.bindinfo.mobile="1888888888"
+                    if (data.bindinfo.mobile) {
+                        var encTel = data.bindinfo.mobile.replace(/\d/g, function (str, idx) {
+                            if (idx >= 3 && idx <= 6) {
+                                return '*'
+                            } else {
+                                return str
+                            }
+                        })
+                        $bindHref.find('.J_st').text(encTel)
+                    } else {
+                        $bindHref.find('a').attr('href', 'http://m2.paipai.com/my/mobbind.shtml')
+                    }
+                }
+            },
+            error: function () { }
+        })
+    }
+
+</script>
+<script type="text/javascript">
+    function plogin(rurl) {
+        function getCookie(name) {
+            var reg = new RegExp("(^| )" + name + "(?:=([^;]*))?(;|$)"),
+                val = document.cookie.match(reg);
+            return val ? (val[2] ? unescape(val[2]) : "") : null;
+        }
+        var ua = navigator.userAgent.toLowerCase();
+        var isWX = window.WeixinJSBridge;
+        var isMQQ = false;
+        if (!isWX) { isWX = ua.match(/micromessenger/) ? true : false; }
+        if (/qq\/([\d\.]+)*/.test(ua)) { isMQQ = true; }
+        if (!rurl) {
+            if (isMQQ) {
+                return (getCookie("skey") && getCookie("uin")) ? true : false;
+            } else {
+                return (getCookie("wg_skey") && getCookie("wg_uin") || getCookie("p_skey") && getCookie("p_uin") || getCookie("skey") && getCookie("uin")) ? true : false;
+            }
+        }
+        if (isWX) {
+            window.location.href = 'http://b.paipai.com/mlogin/tws64/m/wxv2/Login?appid=1&rurl=' + encodeURIComponent(rurl);
+        } else if (isMQQ) {
+            if (mqq && mqq.data) {
+                mqq.data.getUserInfo(function (o) {
+                    window.location.href = rurl;
+                });
+            }
+        } else {
+            window.location.href = 'http://b.paipai.com/mlogin/tws64/m/h5v1/cpLogin?rurl=' + encodeURIComponent(rurl) + '&sid=' + getCookie('sid') + '&uk=' + getCookie('uk');
+        }
+    }
+    (function () {
+        if (!plogin()) {
+            if (isMQQUserAgent()) {
+                if (mqq && mqq.data) {
+                    mqq.data.getUserInfo(function (o) {
+                        initParam();
+                    });
+                }
+            } else {
+                plogin(location.href);
+            }
+
+
+
+        } else {
+            initParam();
+
+        }
+
+        //在APP上隐藏底部的推广和拍拍网服务号
+        if (isWXD()) {
+            $('.app_hide').hide();
+            window.title = document.title = "我是买家";
+        } else {
+            window.title = document.title = "拍拍-我的拍拍";
+        }
+
+    })();
+</script>-->
+</body>
+</html>

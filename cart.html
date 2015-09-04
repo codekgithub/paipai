@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="css/cart.css" rel="stylesheet" />
+</head>
+<body ontouchstart="" mycollectionplug="bind">
+    <div class="mod_container"><div class="mod_bar2" header="true"><a class="mod_bar2_back" ptag="12479.32.2" back="true" href="javascript:;">返回</a><h2 class="mod_bar2_tit" headertitle="true">拍拍-购物车</h2><a href="javascript:;" class="mod_bar2_menu" ptag="12479.32.7" more="true">菜单<span class="mod_bar2_menunum" id="headerMenuBtnNum">1</span></a><div id="headerdropdown" class="mod_bar2_menulist"><a href="http://www.paipai.com/m2/index.html?ptag=12479.32.8" moniter="true" class="mod_bar2_menulist_item mod_bar2_menulist_item1">拍拍首页</a><a href="http://m2.paipai.com/my/index.shtml?ptag=12475.19.12" id="headerMenuMyPaiPaiLink" moniter="true" class="mod_bar2_menulist_item mod_bar2_menulist_item2">我的拍拍<span class="mod_bar2_menunum" id="headerMenuListNum">1</span></a><a href="http://m2.paipai.com/cart/index.shtml?ptag=12479.32.10" moniter="true" class="mod_bar2_menulist_item mod_bar2_menulist_item3">我的购物车</a></div></div>
+        <div id="orderList">                  <div class="order" id="shop_2108689735">             <div class="order_shop" attr-tag="shopcheck">                 <span class="order_state order_state_selected" id="shop_2108689735_state" data-shopid="2108689735"></span>                 <div class="order_shop_name" data-shopid="2108689735" attr-tag="cmdtyshoplink">美颂网品牌手表专营店</div>                 <div class="order_shop_tips" style="display: none;">该店铺可使用：<span class="order_shop_tips_tag">满减满送</span></div>             </div>             <div class="order_list">                                                   <div class="order_goods" id="item_470DB07D00000000040100003AB9A12F_5381" attr-tag="cmdtycheck">                         <span class="order_state order_state_selected" data-itemid="470DB07D00000000040100003AB9A12F_5381"></span>                         <div class="order_goods_img" data-cid="470DB07D00000000040100003AB9A12F" data-itemsceneid="" attr-tag="cmdtylink"><img src="http://img7.paipaiimg.com/00000000/item-55AF5A7F-470DB07D00000000040100003AB9A12F.0.jpg.2.jpg" alt="阿玛尼手表 贝克汉姆定制版 男表 运动休闲手表 AR0397专柜正品"></div>                         <div class="order_goods_info">                             <div class="order_goods_name" data-cid="470DB07D00000000040100003AB9A12F" data-itemsceneid="" attr-tag="cmdtylink">阿玛尼手表 贝克汉姆定制版 男表 运动休闲手表 AR0397专柜正品</div>                             <div class="order_goods_attr" data-cid="470DB07D00000000040100003AB9A12F" data-itemsceneid="" attr-tag="cmdtylink"></div>                             <div class="order_goods_num" attr-tag="cmdtynum">                                 <span class="minus"></span>                                 <input class="num" type="tel" data-cid="470DB07D00000000040100003AB9A12F" data-itemsceneid="" data-itemid="470DB07D00000000040100003AB9A12F_5381" data-max="4" data-quota="0" data-stock="4" data-prevalue="1" oldvalue="1" value="1">                                 <span class="plus"></span>                                <div class="order_goods_price" data-preprice="88800"><i>¥</i>888.00</div>                            </div>                            <div class="order_goods_state">库存：<span class="mod_cored">4</span>件</div>                            <a href="javascript:void(0);" class="order_goods_del" data-cid="470DB07D00000000040100003AB9A12F" data-itemsceneid="" data-itemid="470DB07D00000000040100003AB9A12F_5381" attr-tag="cmdtydel">删除</a>                         </div>                     </div>                                           </div>         </div>              </div>
+    </div>
+    <div id="wxLoading" class="wx_loading" style="display: none;">
+        <div class="wx_loading_inner">
+            <i class="wx_loading_icon"></i>
+            请求加载中...
+        </div>
+    </div>
+    <div id="actLoading" class="mod_loading2" style="display: none;">
+        <div class="mod_loading2_inner">
+            <i class="mod_loading2_icon"></i>
+        </div>
+    </div>
+    <div id="recomWrap" style="display:none;">
+        <div class="blank">暂无商品，您可以<a href="javascript:window.location.reload();">刷新</a>重试。</div>
+        <div id="ppyRecomContent"></div>
+        <div id="wdRecomContent"></div>
+    </div>
+    <div id="totalBar" class="total">
+        <div id="daoTips" class="total_tips" style="display: none;">
+            不支持货到付款的商品已取消勾选<a href="javascript:void(0);" attr-tag="hidedaotips" class="total_tips_close"><i></i></a>
+        </div>
+        <div id="totalState" class="total_state total_state_selected" attr-tag="allcheck" data-ptag-check="12499.3.1" data-ptag-uncheck="12499.3.2">
+            <i></i> <span>全选</span>
+        </div>
+        <div id="daoSelect" class="total_dao" attr-tag="checkcod" data-ptag-check="12499.2.1" data-ptag-uncheck="12499.2.2">
+            <span>货到付款</span><i></i>
+        </div>
+        <div class="total_buy">
+            <div class="total_buy_info">共<span id="totalNum">1</span>件</div>
+            <div class="total_btn" attr-tag="goconfirm" data-ptag="12499.4.1">
+                <span class="total_btn_tit">合计:</span>
+                <span class="total_buy_price"><i>¥</i><span id="totalPrice">888.00</span></span>
+                <span class="total_buy_txt">去结算</span>
+            </div>
+        </div>
+    </div>
+    <div id="layerTips" class="layer_tips" style="display:none;"></div>
+    <script type="text/javascript">
+        function formatPrice(price) {
+            price = parseFloat(price);
+            return (price / 100).toFixed(2);
+        }
+    </script>
+    <script type="text/html" id="normalOrderTpl">
+        <%
+        var items = data.commodity;
+        if(data.isShow){
+        %>
+        <div class="order" id="shop_<%=data.shopId%>">
+            <div class="order_shop" attr-tag="shopcheck">
+                <span class="order_state" id="shop_<%=data.shopId%>_state" data-shopid="<%=data.shopId%>"></span>
+                <div class="order_shop_name" data-shopid="<%=data.shopId%>" attr-tag="cmdtyshoplink"><%=data.shopName%></div>
+                <div class="order_shop_tips" style="display:none;">该店铺可使用：<span class="order_shop_tips_tag">满减满送</span></div>
+            </div>
+            <div class="order_list">
+            <%for(var i=0,len=items.length;i<len;i++){%>
+                <%if(items[i].isProblem == '0'){%>
+                    <div class="order_goods<%if(items[i].isProblem != '0'){%> order_goods_disabled<%}%>" id="item_<%=items[i].itemId%>" attr-tag="cmdtycheck">
+                        <span class="order_state" data-itemid="<%=items[i].itemId%>"></span>
+                        <div class="order_goods_img" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" attr-tag="cmdtylink"><img src="<%=items[i].image%>" alt="<%=items[i].cName%>"></div>
+                        <div class="order_goods_info">
+                            <div class="order_goods_name" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" attr-tag="cmdtylink"><%=items[i].cName%></div>
+                            <div class="order_goods_attr" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" attr-tag="cmdtylink"><%=items[i].stockAttrShow%></div>
+                            <div class="order_goods_num" attr-tag="cmdtynum">
+                                <span class="minus"></span>
+                                <input class="num" type="tel" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" data-itemid="<%=items[i].itemId%>" data-max="<%=items[i].maxBuy%>" data-quota="<%=items[i].stringQuota%>" data-stock="<%=items[i].stringStock%>" data-prevalue="<%=items[i].num%>" oldValue="<%=items[i].num%>" value="<%=items[i].num%>">
+                                <span class="plus"></span>
+                               <div class="order_goods_price" data-preprice="<%=items[i].finalPrice%>"><i>&yen;</i><%=formatPrice(items[i].finalPrice)%></div>
+                           </div>
+                           <div class="order_goods_state">库存：<span><%=items[i].stringStock%></span>件<%if(items[i].stringQuota>0){%>，限购<span><%=items[i].stringQuota%></span>件<%}%></div>
+                           <a href="javascript:void(0);" class="order_goods_del" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" data-itemid="<%=items[i].itemId%>" attr-tag="cmdtydel">删除</a>
+                        </div>
+                    </div>
+                <%}%>
+            <%}%>
+            </div>
+        </div>
+        <%
+        }
+        %>
+    </script>
+    <script type="text/html" id="problemOrderTpl">
+        <%
+        var items = data;
+        %>
+        <div class="order order_none" id="shop_problem">
+            <div class="order_shop order_shop_none">
+                <div class="order_shop_name">失效商品</div>
+            </div>
+            <div class="order_list">
+            <%for(var i=0,len=items.length;i<len;i++){%>
+                <div class="order_goods order_goods_disabled" id="Div1" attr-tag="cmdtycheck">
+                    <span class="order_state" data-itemid="<%=items[i].itemId%>"></span>
+                    <div class="order_goods_img" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" attr-tag="cmdtylink"><img src="<%=items[i].image%>" alt="<%=items[i].cName%>"></div>
+                    <div class="order_goods_info">
+                        <div class="order_goods_name" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" attr-tag="cmdtylink"><%=items[i].cName%></div>
+                        <div class="order_goods_attr" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" attr-tag="cmdtylink"><%=items[i].stockAttrShow%></div>
+                        <div class="order_allow_bar" attr-tag="cmdtysimilar">
+                            <a href="http://ms.paipai.com/item?charset=gbk&globalsearch=1&searchshop=0&sf=6&showlpitem=0&lpitemid=<%=items[i].cid%>&lpitemtitle=<%=items[i].cName.replace(/\"/g,'')%>" class="order_goods_similar">找类似</a>
+                            <div class="order_goods_state">此商品已下架</div>
+                        </div>
+                        <a href="javascript:void(0);" class="order_goods_del" data-cid="<%=items[i].cid%>" data-itemsceneId="<%=items[i].itemsceneId%>" data-itemid="<%=items[i].itemId%>" attr-tag="cmdtydel">删除</a>
+                    </div>
+                </div>
+            <%}%>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript">window.pageErrorKey = 'pp.h5.cart.index.health'; window.pageErrorLog = 'pp_h5_cart';</script>
+    <script type="text/javascript">
+        (function (w, d) {
+            var oTime = w.setTimeout(function () {
+                try {
+                    var k = '_health_report';
+                    w[k] = new Image;
+                    w[k].onload = w[k].onerror = w[k].onabort = function () {
+                        w[k].onload = w[k].onerror = w[k].onabort = null;
+                        w[k] = null;
+                    };
+                    w[k].src = 'http://d.paipai.com/ump/AddCount?key=' + (w.pageErrorKey || 'pp.h5.unknow') + '&logname=' + (w.pageErrorLog || 'pp_h5_cart');
+                } catch (e) { }
+            }, 10000);
+            d.addEventListener('pagehealthy', function (e) {
+                w.clearTimeout(oTime);
+                console.info('pagehealthy: notify received');
+            }, false);
+        })(window, document);
+</script>
+    <script src="http://s.paipaiimg.com/js/version/201505/common/header.201505261553.js" type="text/javascript" charset="utf-8" title="公共头部js"></script><script type="text/javascript" src="http://b.paipai.com/buyerinfo_ext/getbuyertips?callback=headerGetBuyerTips&amp;_=46234idyb6u20" charset="utf-8"></script>
+
+
+    <script type="text/javascript">
+        //entra140-46
+        (function (global) {
+            var g = [[]], d = 'http://s.paipaiimg.com', m = {}, blankjs = "", grays = {}, mdebug = location.href.indexOf("mdebug=1") != -1, buildjs = {};
+            m.alias = {};
+            var buildjs = [];
+            var a = {}, p = {}, c = [];
+            g["0"] = ["\/js\/version\/201503\/cart\/disableShare.201503111135.js", "\/js\/version\/201508\/cart\/shopCart.201508031119.js", "\/js\/version\/201506\/cart\/shopCart.model.201506171028.js", "\/js\/version\/201503\/cart\/speedtime.201503111135.js", "\/js\/version\/201504\/common\/dataReport.201504071042.js", "\/js\/version\/201501\/cookie.201501061624.js", "\/js\/version\/201401\/formatJson.201401101547.js", "\/js\/version\/201306\/loadscript.201306251923.js", "\/js\/version\/201504\/login.201504271115.js", "\/js\/version\/201501\/url.201501281555.js", "\/js\/version\/201412\/zepto.201412051045.js"];
+            c = [['cart/disableShare', 0, 0], ['cart/shopCart', 0, 1], ['cart/shopCart.model', 0, 2], ['cart/speedtime', 0, 3], ['common/dataReport', 0, 4], ['cookie', 0, 5], ['formatJson', 0, 6], ['loadscript', 0, 7], ['login', 0, 8], ['url', 0, 9], ['zepto', 0, 10]];
+            if (typeof (JSON) != "undefined" && window.localStorage) {
+                for (var key in localStorage) {
+                    if (/^_m_/.test(key)) {
+                        var store = JSON.parse(localStorage.getItem(key));
+                        var i = key.substr(3);
+                        if ((new Date()).getTime() > store.cacheTime) {
+                            continue;
+                        }
+                        var _m = getModuleMap(i);
+                        if (!_m || _m.group == 0) { continue; }
+                        var curPath = g[_m.group][_m.groupid];
+                        if ((d + curPath) == store.path) {
+                            g[0].push(curPath);
+                            g[_m.group][_m.groupid] = blankjs;
+                            c[_m.index] = [_m.id, 0, g[0].length - 1];
+                        }
+                    }
+                }
+            }
+            function getModuleMap(id) {
+                for (var i = 0; i < c.length; i++) {
+                    if (c[i][0] == id) {
+                        return { "id": id, "index": i, "group": c[i][1], "groupid": c[i][2] };
+                    }
+                }
+                return "";
+            }
+            function getCombUrl(list) {
+                var a = [];
+                for (var i = 0; i < list.length; i++) {
+                    if (list[i]) {
+                        a.push(list[i]);
+                    }
+                }
+                return a.length > 1 ? (d + "/c/=" + a.join(",")) : (d + a[0]);
+            }
+            for (var i = 0; i < c.length; i++) {
+                var surl = d + g[c[i][1]][c[i][2]];
+                var furl = getCombUrl(g[c[i][1]]);//鍚堝苟鍖呭湴鍧€
+                a[c[i][0]] = surl;
+                p[c[i][0]] = (c[i][1] == 0) ? surl : furl;
+
+                if (buildjs && typeof (buildjs[c[i][0]]) != "undefined") {
+                    p[c[i][0]] = d + buildjs[c[i][0]]
+                }
+            }
+
+            m.alias = mdebug ? a : p;
+            m.moduleURI = a;
+
+            m.vars = {
+                "jquery": "zepto"
+            };
+
+            global._moduleConfig = m;
+
+            function gray(m) {
+            }
+
+        })(this);
+
+</script>
+<script type="text/javascript">if (typeof JSON !== "object") { JSON = {}; } (function () { function f(n) { return n < 10 ? "0" + n : n; } if (typeof Date.prototype.toJSON !== "function") { Date.prototype.toJSON = function (key) { return isFinite(this.valueOf()) ? this.getUTCFullYear() + "-" + f(this.getUTCMonth() + 1) + "-" + f(this.getUTCDate()) + "T" + f(this.getUTCHours()) + ":" + f(this.getUTCMinutes()) + ":" + f(this.getUTCSeconds()) + "Z" : null; }; String.prototype.toJSON = Number.prototype.toJSON = Boolean.prototype.toJSON = function (key) { return this.valueOf(); }; } var cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, escapable = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, gap, indent, meta = { "\b": "\\b", "\t": "\\t", "\n": "\\n", "\f": "\\f", "\r": "\\r", '"': '\\"', "\\": "\\\\" }, rep; function quote(string) { escapable.lastIndex = 0; return escapable.test(string) ? '"' + string.replace(escapable, function (a) { var c = meta[a]; return typeof c === "string" ? c : "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4); }) + '"' : '"' + string + '"'; } function str(key, holder) { var i, k, v, length, mind = gap, partial, value = holder[key]; if (value && typeof value === "object" && typeof value.toJSON === "function") { value = value.toJSON(key); } if (typeof rep === "function") { value = rep.call(holder, key, value); } switch (typeof value) { case "string": return quote(value); case "number": return isFinite(value) ? String(value) : "null"; case "boolean": case "null": return String(value); case "object": if (!value) { return "null"; } gap += indent; partial = []; if (Object.prototype.toString.apply(value) === "[object Array]") { length = value.length; for (i = 0; i < length; i += 1) { partial[i] = str(i, value) || "null"; } v = partial.length === 0 ? "[]" : gap ? "[\n" + gap + partial.join(",\n" + gap) + "\n" + mind + "]" : "[" + partial.join(",") + "]"; gap = mind; return v; } if (rep && typeof rep === "object") { length = rep.length; for (i = 0; i < length; i += 1) { if (typeof rep[i] === "string") { k = rep[i]; v = str(k, value); if (v) { partial.push(quote(k) + (gap ? ": " : ":") + v); } } } } else { for (k in value) { if (Object.prototype.hasOwnProperty.call(value, k)) { v = str(k, value); if (v) { partial.push(quote(k) + (gap ? ": " : ":") + v); } } } } v = partial.length === 0 ? "{}" : gap ? "{\n" + gap + partial.join(",\n" + gap) + "\n" + mind + "}" : "{" + partial.join(",") + "}"; gap = mind; return v; } } if (typeof JSON.stringify !== "function") { JSON.stringify = function (value, replacer, space) { var i; gap = ""; indent = ""; if (typeof space === "number") { for (i = 0; i < space; i += 1) { indent += " "; } } else { if (typeof space === "string") { indent = space; } } rep = replacer; if (replacer && typeof replacer !== "function" && (typeof replacer !== "object" || typeof replacer.length !== "number")) { throw new Error("JSON.stringify"); } return str("", { "": value }); }; } if (typeof JSON.parse !== "function") { JSON.parse = function (text, reviver) { var j; function walk(holder, key) { var k, v, value = holder[key]; if (value && typeof value === "object") { for (k in value) { if (Object.prototype.hasOwnProperty.call(value, k)) { v = walk(value, k); if (v !== undefined) { value[k] = v; } else { delete value[k]; } } } } return reviver.call(holder, key, value); } text = String(text); cx.lastIndex = 0; if (cx.test(text)) { text = text.replace(cx, function (a) { return "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4); }); } if (/^[\],:{}\s]*$/.test(text.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@").replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]").replace(/(?:^|:|,)(?:\s*\[)+/g, ""))) { j = eval("(" + text + ")"); return typeof reviver === "function" ? walk({ "": j }, "") : j; } throw new SyntaxError("JSON.parse"); }; } }()); var modulejs, require, define; (function (global) {
+    var mod, cfg, _modulejs, _define, _require; var version = "1.0.2"; var isCache = true; var cacheTime = 60 * 60 * 24 * 30 * 1000; cfg = { debug: location.href.indexOf("mdebug=1") != -1 ? true : false, alias: {}, cssAlias: {}, moduleURI: {}, vars: {}, uris: {}, modules: {}, callback: [], actModules: {}, cacheLoad: {}, cacheDel: {}, deps: {}, events: {}, timing: {} }; _modulejs.config = config; config(global["_moduleConfig"] ? global._moduleConfig : cfg); global["_moduleConfig"] = cfg; require = _require; define = _define; modulejs = _modulejs; on("module_ready", function (id, fromeCache) {
+        cfg.callback = cleanArray(cfg.callback); var init = cfg.callback, l = init.length; for (var i = 0; i < l; i++) {
+            if (init[i] && checkDeps(init[i].dependencies)) {
+                var cb = init[i].factory; var deps = init[i].dependencies; var mods = []; var allDeps = []; var m; for (var j = 0; j < deps.length; j++) { var m = _require(deps[j]); allDeps.push(m.dependencies); mods.push(m); }
+                debug("callback_is_run=start", cb.toString(), cfg.callback); init[i] = null; cb.apply(null, mods); cfg.debug && emit("callback_is_run", cb.toString().replace(/[\r\n]/g, ""));
+            }
+        }
+    }); on("module_require", function (id) { cfg.actModules[id] = cfg.actModules[id] ? (cfg.actModules[id] + 1) : 1; }); on("module_cacheDel", function (id) { cfg.cacheDel[id] = 1; }); on("cache_load", function (m) { }); on("module_loss_alias", function (id) { console.error("module_loss_alias:" + id); }); var cacheNow = new Date(); _loadCache(); cfg.timing['loadcache'] = new Date() - cacheNow; function _loadCache() {
+        if (!_useCache()) { return false; }
+        localStorage.removeItem("_modules"); for (var key in localStorage) {
+            if (/^_m_/.test(key)) {
+                var store = JSON.parse(localStorage.getItem(key)); var i = key.substr(3); var now = (new Date()).getTime(); var oneDay = 24 * 3600 * 1000; if (cfg.alias[i]) { if (_getModuleURI(i) != store.path || store.deps.join(",").indexOf("{") > -1) { emit("module_cacheDel", i); localStorage.removeItem(key); continue; } } else { if (now > store.cacheTime) { emit("module_cacheDel", i); localStorage.removeItem(key); continue; } }
+                if (store.cacheTime - now < oneDay) { store.cacheTime = (new Date()).getTime() + cacheTime; try { localStorage.removeItem(key); localStorage.setItem(key, JSON.stringify(store)); } catch (e) { } }
+                cfg.cacheLoad[store.id] = store; emit("cache_load", store);
+            }
+        }
+    }
+    function _getModuleURI(id) { return cfg.moduleURI[id] ? cfg.moduleURI[id] : cfg.alias[id]; }
+    function _useCache(id, deps, factory) {
+        if (typeof (JSON) == "undefined") { return false; }
+        if (!isCache) { return false; }
+        if (!(JSON && window.localStorage)) { return false; }
+        if (cfg.debug) { return false; }
+        var agent = navigator.userAgent.toLowerCase(); if (agent.indexOf("msie") > 0) { var m = agent.match(/msie\s([\d\.]+);/i); if (m && m.length >= 2 && parseInt(m[1]) <= 6) { return false; } }
+        if (id && id.indexOf("_") == 0) { return false; }
+        if (factory && factory.toString().indexOf("_cacheThisModule_") < 0) { return false; }
+        return true;
+    }
+    function _cacheModule(id, deps, factory) { var key = "_m_" + id; var _t = localStorage.getItem(key); var ms = _t ? JSON.parse(_t) : {}; ms = { "id": id, "deps": deps, "factory": factory.toString(), "path": _getModuleURI(id), "cacheTime": (new Date()).getTime() + cacheTime }; try { localStorage.removeItem(key); localStorage.setItem(key, JSON.stringify(ms)); emit("module_cached", id); } catch (e) { } }
+    function _define(id, deps, factory) {
+        if (!id || (typeof (id) != "string"))
+            return; if (id != "_init" && typeof (cfg.modules[id]) != "undefined") { emit("module_ready", id); return true; }
+        if (arguments.length === 2) { factory = deps; deps = null; }
+        deps = isType("Array", deps) ? deps : (deps ? [deps] : []); if (isType("Function", factory)) { var _deps = parseDependencies(factory.toString()); }
+        _useCache(id, deps, factory) && _cacheModule(id, deps, factory); deps = mergeArray(deps, _deps); var mod = new Module(id); mod.dependencies = deps || []; for (var i = mod.dependencies.length - 1; i >= 0; i--) { mod.dependencies[i] = parseVars(mod.dependencies[i]); }
+        mod.factory = factory; if (id == "_init") { cfg.callback.push(mod); } else { cfg.modules[id] = mod; }
+        emit("module_ready", id);
+    }
+    function _require(id) {
+        id = parseVars(id); var module = cfg.modules[id]; emit("module_require", id); if (!module) { emit("module_error", id); return null }
+        if (module.exports) { return module.exports; }
+        var now = new Date(); var factory = module.factory; var exports = isType("Function", factory) ? factory(require, module.exports = {}, module) : factory; module.exports = exports === undefined ? module.exports : exports; cfg.timing[id] = new Date() - now; return module.exports;
+    }
+    _require.async = _modulejs; _require.css = function (path) {
+        path = cfg.cssAlias && cfg.cssAlias[path] ? cfg.cssAlias[path] : path; if (!path) { return; }
+        var l; if (!window["_loadCss"] || window["_loadCss"].indexOf(path) < 0) { l = document.createElement('link'); l.setAttribute('type', 'text/css'); l.setAttribute('rel', 'stylesheet'); l.setAttribute('href', path); l.setAttribute("id", "loadCss" + Math.random()); document.getElementsByTagName("head")[0].appendChild(l); window["_loadCss"] ? (window["_loadCss"] += "|" + path) : (window["_loadCss"] = "|" + path); }
+        l && (typeof callback == "function") && (l.onload = callback); return true;
+    }
+    function _modulejs(deps, factory) { _define("_init", deps, factory); }
+    function checkDeps(deps) {
+        var list = {}, flag = true; for (var i = 0; i < deps.length; i++) list[deps[i]] = 1; getDesps(deps, list); for (var i in list) { if (!cfg.modules[i]) { loadModule(i); flag = false; } }
+        return flag; function getDesps(deps, list) {
+            for (var i = 0; i < deps.length; i++) {
+                if (!list[deps[i]]) { list[deps[i]] = 1; }
+                if (cfg.modules[deps[i]] && list[deps[i]] != 2) { list[deps[i]] = 2; getDesps(cfg.modules[deps[i]].dependencies, list); }
+            }
+        }
+    }
+    function parseVars(id) {
+        var VARS_RE = /{([^{]+)}/g
+        var vars = cfg.vars
+        if (vars && id.indexOf("{") > -1) { id = id.replace(VARS_RE, function (m, key) { return isType("String", vars[key]) ? vars[key] : key }) }
+        return id
+    }
+    function mergeObject(a, b) {
+        for (var i in b) {
+            if (!b.hasOwnProperty(i)) { continue; }
+            if (!a[i]) { a[i] = b[i]; } else if (Object.prototype.toString.call(b[i]) == "[object Object]") { mergeObject(a[i], b[i]); } else { a[i] = b[i]; }
+        }
+        return a;
+    }
+    function config(obj) { return cfg = mergeObject(cfg, obj); }
+    function Module(id) { this.id = id; this.dependencies = []; this.exports = null; this.uri = ""; }
+    function loadModule(id) {
+        var m; if (m = cfg.cacheLoad[id]) { return _define(m.id, m.deps, eval("a = " + m.factory)); }
+        if (cfg.modules[id]) { emit("module_ready", id); return; }
+        var url = cfg.alias[id] ? cfg.alias[id] : ""; if (!url) { emit("module_loss_alias", id); return; }
+        if (cfg.uris[url]) { return; }
+        cfg.uris[url] = 1; var head = document.getElementsByTagName("head")[0] || document.documentElement; var baseElement = head.getElementsByTagName("base")[0]; var node = document.createElement("script"); node.charset = "utf-8"; node.async = true; node.src = url; var handler = function () {
+            var callee = arguments.callee
+            cfg.timing[callee.uri] = new Date() - callee.time;
+        }; handler.time = new Date(); handler.uri = url; node.onload = handler; baseElement ? head.insertBefore(node, baseElement) : head.appendChild(node); cfg.debug && emit("file_loading", url);
+    }
+    function on(name, cb) {
+        var cbs = cfg.events[name]; if (!cbs) { cbs = cfg.events[name] = []; }
+        cbs.push(cb);
+    }
+    function emit(name, evt) {
+        debug(name, evt); if (!cfg.events[name] || cfg.events[name].length == 0) { return; }
+        for (var i = 0, l = cfg.events[name].length; i < l; i++) { cfg.events[name][i](evt); }
+        if (name === 'error') { delete cfg.events[name]; }
+    }
+    function cleanArray(a) {
+        var n = []; for (var i = 0; i < a.length; i++) { a[i] && n.push(a[i]); }
+        return n;
+    }
+    function mergeArray(a, b) {
+        for (var i = 0; i < b.length; i++) { (("," + a + ",").indexOf("," + b[i] + ",") < 0) && a.push(b[i]); }
+        return a;
+    }
+    function isType(type, obj) { return Object.prototype.toString.call(obj) === "[object " + type + "]" }
+    function parseDependencies(code) {
+        var commentRegExp = /(\/\*([\s\S]*?)\*\/|([^:]|^)\/\/(.*)$)/mg; var cjsRequireRegExp = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g; var ret = []; code.replace(commentRegExp, "").replace(cjsRequireRegExp, function (match, dep) { dep && ret.push(parseVars(dep)); })
+        return ret;
+    }
+    function debug() {
+        if (!cfg.debug) { return true; }
+        var a = [], l = arguments.length; for (var i = 0; i < l; i++) { a.push(arguments[i]); }
+        try { } catch (e) { }
+    }
+}(this));</script>
+<script type="text/javascript">
+    var _speedMarkModule = new Date();
+    modulejs("cart/shopCart", function (shopCart) {
+        shopCart.showList();
+    });</script>
+
+    <div id="footernav" style="display:none" class="mod_aside mod_aside2">
+    <a id="morebutton" class="mod_aside_more" href="javascript:;"></a>
+    <a id="backtotop" class="mod_aside_top" href="javascript:;"></a>
+    <div id="navlist" style="display:none;" class="mod_aside_item">
+        <a id="pagenavlink0" class="mod_aside_fav" href="http://www.paipai.com/m2/index.html?ptag=12475.19.1">拍拍首页</a>
+        <a id="pagenavlink1" class="mod_aside_fav" href="http://www.paipai.com/m2/ttj/tuan_list.html?_vw=1&amp;ptag=12475.19.7" style="color:#E02428">拍便宜</a>
+        <a id="pagenavlink3" href="http://app.paipai.com/h5/checkDownApp/h5CllApp.xhtml?union_type=f_paipaih52&amp;ptag=12475.19.11">拍拍App</a>
+        <a id="pagenavlink2" style="display:none" class="mod_aside_uc" href="javascript:;">店铺首页</a>
+        <a class="mod_aside_uc" href="http://m.paipai.com/cart/index.shtml?ptag=12475.19.9">我的购物车</a>
+        <a id="pagenavlink5" class="mod_aside_history" href="http://paipai.com/m2/my/fav.shtml?_vw=1&amp;ptag=12475.19.4">我的微店</a>
+        <a id="pagenavlink4" class="mod_aside_uc" href="http://paipai.com/m2/my/order_list.shtml?_vw=1&amp;ptag=12475.19.6">我的订单</a>
+    </div>
+</div>
+
+<div class="mod_footer" id="common_footer">
+    <div class="mod_footer_lk">
+        <a name="footerfirst" href="http://www.paipai.com/m2/index.html?ptag=12475.31.1&amp;_vw=1">拍拍首页</a>
+        <a name="footerprofile" href="http://m2.paipai.com/my/index.shtml?ptag=12475.31.3">我的拍拍</a>
+        <a name="footerindex" style="color:#e02229" href="http://wd.paipai.com/static/wxd/h5.html?chid=47&amp;isrun=1&amp;isjump=1&amp;ptag=12475.31.2&amp;_vw=1">免费开店</a>
+    </div>
+    <div id="footer_logo" class="mod_footer_logo">
+        <a href="http://m.paipai.com?ptag=12475.31.4&amp;_vw=1">
+            <span class="mod_logo"></span>
+        </a>
+    </div>
+</div>
+<script src="http://s.paipaiimg.com/js/version/201507/common/footer.201507151038.js" type="text/javascript" charset="utf-8" title="公共底部js"></script>
+
+    <script src="http://s.paipaiimg.com/js/version/201505/common/recommend.201505041817.js" type="text/javascript" charset="utf-8" title="推荐组件"></script>
+
+    <script src="http://s.paipaiimg.com/js/version/201503/ppdata/pp.mobile.report.201503031736.js" type="text/javascript" charset="utf-8" title="拍拍H5上报"></script>
+
+    <script>speedTimePoint[2] = new Date();</script>
+
+</body>
+</html>
